@@ -1,0 +1,57 @@
+----------------------------EPG:
+数据流程：
+NIT表→SDT表→EIT表→生成EPG
+NIT：
+频率、符号率、调制方式
+
+--------------------------解扰
+SDT表业务标识符service_id（它等于program_number）→PAT表→PMT表→找到所需节目的TS包→CAT表→解扰→解码
+
+DTV -> 通知CA，触发事件 -> CA  
+DTVInit（CSCreateCA，CSCATCallback-表注册函数）-》
+
+
+解扰开启流程：
+MediaPlayer-》MediaPlayerService-》DVBPlayer（DCASAL_notifyFreqChange-》）-》Novel-Supertv(Client)（BpCATNoticeFilterServer）-》Novel-Supertv(CAT-server)（TRANSACTION_notifyFreqChange）-》DVBPlayer（start ca startDescrambling）-》DTVALManager（DTVAL_caStartDescrambling-CSNotifyStartCA）-》CSUDIOSMsgQueueSend（）CaApp/CS_IRDETOCA_UserInterface.c-》CAT-server（CatTimerFun）-》CAT-server（StartFilter）
+解扰运行流程：
+task（ParseServiceStatusMsg注册出去）-》get(softcell service and demux index or group handle)-》CA_SVCINFO_ParseDescrambleServiceInfo-》
+
+重点解析--CA_SVCINFO_ParseDescrambleServiceInfo（）：
+CA_LOCAL_GROUP_SERVICE_INFO：EMM、ECM数据(录制与回放有不同的定义)、进行解扰信息的获取、
+
+
+
+
+CA初始化--CS_CA_Init：如下
+2.CA服务的开启--CS_IRDTOCA_Init：
+  信号量初始化；
+  版本信息获取；
+  信息空间的初始化；
+  任务队列初始化；
+  高安（SWC）的CA设置；
+  OTA初始化；
+  NVM初始化；
+  TXT初始化；
+  智能卡驱动初始化；
+  demux驱动初始化；
+  三方CA服务初始化；
+  Command初始化；
+  UI初始化；
+  
+  
+  
+
+CA线程服务启动：已开启则直接使用，未启动则重新启动（在初始化时，已创建）
+操作事项：服务句柄的绑定
+
+CAT数据：数据更新
+
+PMT数据：数据更新
+
+CA线程服务停止：释放句柄、释放demux、CA_TASK_SendMessage-请求停止task（客户端发出停止caapp-》服务停止catask）、softcell资源的是否
+
+
+问题：
+在手动搜索的时候，调制方式是固定的，这个对所有的节目都适用吗？
+谁对表数据信息进行了解析？
+
