@@ -44,13 +44,13 @@ cp ./out/target/product/Hi3798MV200/system/lib/libshuma.so /sdb/wulijiao
 logcat -c;logcat -G 10M;logcat -v time | grep -E "Ca_Shuma_tvos|CAManager_native|DVTSTBCA_UrgencyBroadcast|DVTSTBCA_ShowOSDMsg|OTTDVB|CAALManager|CAManager_native|CAMail_native|ca_shuma_irdto_tvos|Ca_Shuma_tvos"
 logcat -c;logcat -G 10M;logcat -v time | grep -E "DVTSTBCA_ShowOSDMsg|ca_shuma_irdto_tvos|CAManager_native|DVTSTBCA_UrgencyBroadcast"
 
-logcat -c;logcat -G 10M;logcat -v time | grep -E "IrdetoAppDepend|ca_shuma_irdto_tvos|IrdetoOS|IrdetoMail"
-
+邮件:logcat -c;logcat -G 10M;logcat -v time | grep -E "IrdetoAppDepend|ca_shuma_irdto_tvos|IrdetoOS|IrdetoMail"
+抓取应急广播：
 logcat -c;logcat -G 10M;logcat -v time | grep -E "CAMail_native|pcTmpContent|getConent|CAMAILGetConent|ca_shuma_irdto_tvos"
 获取信息：
 logcat -c;logcat -G 10M;logcat -v time | grep -E "Ca_Shuma_tvos|shuma_caporting|CAManager_native|DVTSTBCA_UrgencyBroadcast|DVTSTBCA_ShowOSDMsg"
 logcat -c;logcat -G 10M;logcat -v time | grep -E "CAManager_native|CAViewedIPP_native|CACard_native|CAIPP_native|CAALManager|TV_JNI|shuma_caporting|DTVALManager|CS_CA|Ca_Shuma_tvos|ca_shuma_irdto_tvos|OTTDVB"
-logcat -c;logcat -G 10M;logcat -v time | grep -E "Ca_Shuma_tvos|CAManager_native|DVTSTBCA_UrgencyBroadcast|DVTSTBCA_ShowOSDMsg"
+界面提示：logcat -c;logcat -G 10M;logcat -v time | grep -E "CA_COMMON"
 
 乱码：
 java -encoding gdk /sdb/wulijiao/tvos/COSHIP_TVOS/framework/ngb-j/java/impl/ngb/ca/CAManagerImp.java
@@ -78,7 +78,7 @@ git pull
 git status
 git add 
 git commit -m 
-git push origin HAND:for/refs/master
+git push origin HAND:refs/for/master
 注意钩子文件的下载，才可以留下记录
 
 
@@ -92,6 +92,8 @@ rm /data/data/com.coship.providers.dvb/databases/*
 堆栈数据位置：
 /data/tomstonbes
 
+属性设置：
+android 设置属性的C接口 property_set
 
 初始化：
 CA卡信息IO口的初始化
