@@ -18,6 +18,9 @@ export PERLLIB=~/sme_tool/usr/lib/perl/:$PERLLIB
 export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
 export PATH=$JAVA_HOME:$PATH
 
+备份：
+mmm /sdb/wulijiao/tvosbak/COSHIP_TVOS/component/CA/ -B
+mmm /sdb/wulijiao/tvosbak/COSHIP_TVOS/component/CSDTV/ -B
 
 
 
@@ -42,15 +45,18 @@ cp ./out/target/product/Hi3798MV200/system/lib/libshuma.so /sdb/wulijiao
 
 
 logcat -c;logcat -G 10M;logcat -v time | grep -E "Ca_Shuma_tvos|CAManager_native|DVTSTBCA_UrgencyBroadcast|DVTSTBCA_ShowOSDMsg|OTTDVB|CAALManager|CAManager_native|CAMail_native|ca_shuma_irdto_tvos|Ca_Shuma_tvos"
-logcat -c;logcat -G 10M;logcat -v time | grep -E "DVTSTBCA_ShowOSDMsg|ca_shuma_irdto_tvos|CAManager_native|DVTSTBCA_UrgencyBroadcast"
+
 
 邮件:logcat -c;logcat -G 10M;logcat -v time | grep -E "IrdetoAppDepend|ca_shuma_irdto_tvos|IrdetoOS|IrdetoMail"
 抓取应急广播：
-logcat -c;logcat -G 10M;logcat -v time | grep -E "CAMail_native|pcTmpContent|getConent|CAMAILGetConent|ca_shuma_irdto_tvos"
+OSD:    logcat -c;logcat -G 10M;logcat -v time | grep -E "OTTDVB||ca_shuma_irdto_tvos|DVTCA_UINF|shuma_caporting|DVTSTBCA_UrgencyBroadcast|Ca_Shuma_tvos|CAManager_native|DVTSTBCA_ShowOSDMsg"
+NO_OSD: logcat -c;logcat -G 10M;logcat -v time | grep -E "shuma_caporting|CAALManager|ca_shuma_irdto_tvos|CAManager_native|DVTSTBCA_UrgencyBroadcast|Ca_Shuma_tvos|DVTCA_UINF|CA_COMMON"
+logcat -c;logcat -G 20M;logcat -v time | grep -E "shuma_caporting|ca_shuma_irdto_tvos|CAALManager|CAManager_native|OTTDVB|Ca_Shuma_tvos|DVTCA_UINF|CA_COMMON|UDI_DMX"
+
 获取信息：
 logcat -c;logcat -G 10M;logcat -v time | grep -E "Ca_Shuma_tvos|shuma_caporting|CAManager_native|DVTSTBCA_UrgencyBroadcast|DVTSTBCA_ShowOSDMsg"
 logcat -c;logcat -G 10M;logcat -v time | grep -E "CAManager_native|CAViewedIPP_native|CACard_native|CAIPP_native|CAALManager|TV_JNI|shuma_caporting|DTVALManager|CS_CA|Ca_Shuma_tvos|ca_shuma_irdto_tvos|OTTDVB"
-界面提示：logcat -c;logcat -G 10M;logcat -v time | grep -E "CA_COMMON"
+界面提示：logcat -c;logcat -G 10M;logcat -v time | grep -E "chdrv_av.c"
 
 乱码：
 java -encoding gdk /sdb/wulijiao/tvos/COSHIP_TVOS/framework/ngb-j/java/impl/ngb/ca/CAManagerImp.java
@@ -64,6 +70,9 @@ strings -f ./out/target/product/Hi3798MV200/system/lib/*.so |grep "pstMsg*******
 查看堆栈信息：
 arm-histbv310-linux-addr2line  -e out/target/product/Hi3798MV200/symbols/system/lib/libsm_irdeto.so -f 0004b720 -C
 arm-histbv310-linux-addr2line  -Ce out/target/product/Hi3798MV200/symbols/system/lib/libngbj_jni.so -f 00014637
+
+跨越权限进行文件的拷贝：
+scp -r wulijiao@10.10.117.232:/sdb/wulijiao/libporting.so ./
 
 截获码流信息：
 echo help > demux_main 

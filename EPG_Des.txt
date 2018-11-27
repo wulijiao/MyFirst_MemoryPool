@@ -13,6 +13,7 @@ DTVInit（CSCreateCA，CSCATCallback-表注册函数）-》
 
 解扰开启流程：
 MediaPlayer-》MediaPlayerService-》DVBPlayer（DCASAL_notifyFreqChange-》）-》Novel-Supertv(Client)（BpCATNoticeFilterServer）-》Novel-Supertv(CAT-server)（TRANSACTION_notifyFreqChange）-》DVBPlayer（start ca startDescrambling）-》DTVALManager（DTVAL_caStartDescrambling-CSNotifyStartCA）-》CSUDIOSMsgQueueSend（）CaApp/CS_IRDETOCA_UserInterface.c-》CAT-server（CatTimerFun）-》CAT-server（StartFilter）
+startDescrambling（DVBPlayer） --- CSNotifyStartCA 
 解扰运行流程：
 task（ParseServiceStatusMsg注册出去）-》get(softcell service and demux index or group handle)-》CA_SVCINFO_ParseDescrambleServiceInfo-》
 
