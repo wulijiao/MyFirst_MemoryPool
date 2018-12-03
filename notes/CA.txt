@@ -56,7 +56,7 @@ logcat -c;logcat -G 20M;logcat -v time | grep -E "shuma_caporting|ca_shuma_irdto
 获取信息：
 logcat -c;logcat -G 10M;logcat -v time | grep -E "Ca_Shuma_tvos|shuma_caporting|CAManager_native|DVTSTBCA_UrgencyBroadcast|DVTSTBCA_ShowOSDMsg"
 logcat -c;logcat -G 10M;logcat -v time | grep -E "CAManager_native|CAViewedIPP_native|CACard_native|CAIPP_native|CAALManager|TV_JNI|shuma_caporting|DTVALManager|CS_CA|Ca_Shuma_tvos|ca_shuma_irdto_tvos|OTTDVB"
-界面提示：logcat -c;logcat -G 10M;logcat -v time | grep -E "dtv.search"
+界面提示：logcat -c;logcat -G 10M;logcat -v time | grep -E "chdrv_av.c"
 
 乱码：
 java -encoding gdk /sdb/wulijiao/tvos/COSHIP_TVOS/framework/ngb-j/java/impl/ngb/ca/CAManagerImp.java
@@ -66,11 +66,6 @@ strings -f ./out/target/product/Hi3798MV200/system/lib/*.so |grep "pstMsg*******
  busybox free -m
  busybox sysctl -w vm.drop_caches=3
  rm data/
-
-变动：
-改后的好处就是ca编译不再依赖dtv
-irdeto调用section2C接口改成调用udi2的接口了
-
 
 查看堆栈信息：
 arm-histbv310-linux-addr2line  -e out/target/product/Hi3798MV200/symbols/system/lib/libsm_irdeto.so -f 0004b720 -C

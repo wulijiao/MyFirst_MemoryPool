@@ -1,0 +1,964 @@
+﻿	CSDebugSet("dtv.search",INFO_LEVEL);
+	CSDebugSet("dtv.si",INFO_LEVEL);
+	CSDebugSet("dtv.section",INFO_LEVEL);
+	CSDebugSet("dtv.si",INFO_LEVEL);
+无用打印---CSDebugSet("sitime",ERROR_LEVEL);
+	CSDebugSet("NGB_PSI",INFO_LEVEL);
+	CSDebugSet("SINetWork",INFO_LEVEL);
+	CSDebugSet("SFDMX_DRIVER",INFO_LEVEL);
+
+
+01-01 08:02:31.142 D/MMCP    ( 1643): <dtv.search> ==============================
+01-01 08:02:31.142 D/MMCP    ( 1643): <dtv.search> USPSearch-T-02.00.01 Nov 22 2018 18:52:04
+01-01 08:02:31.142 D/MMCP    ( 1643): <dtv.search> ==============================
+01-01 08:02:31.143 D/MMCP    ( 1643): <dtv.search> USPSI-T-02.00.01 Nov 22 2018 18:52:37
+01-01 08:02:31.143 D/MMCP    ( 1643): <dtv.search> dtv search svn version:(debug) (Android_Hi3796M_tvos.config) ()
+01-01 08:02:31.143 D/MMCP    ( 1643): <dtv.search> ==============================
+01-01 08:02:31.143 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH InsertSearchHandle 543] insert hSearch, hSearch is 0xb38ab100
+01-01 08:02:31.143 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] SearchExType = 0x80100 
+
+01-01 08:02:31.143 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH SearchThread 636]search action 1 start!
+01-01 08:02:31.143 D/MMCP    ( 1643): <dtv.search> [USP_Search] StartSearchEx sourceType = 4
+01-01 08:02:31.143 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] Searching deliver 0/1
+
+
+07-20 19:26:21.062 D/MMCP    ( 1643): <dtv.sicache> SILoader: To CSSICLoadTable() :
+07-20 19:26:21.062 D/MMCP    ( 1643): <dtv.sicache> SILoader: To CSSICLoadTableByFreq() :
+07-20 19:26:21.062 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwDeviceId : 0
+07-20 19:26:21.062 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwFreq : 0
+07-20 19:26:21.062 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > ucTableId : 0
+07-20 19:26:21.062 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wTableIdExt : 65535
+07-20 19:26:21.062 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwTimeOutMs : 2000
+07-20 19:26:21.062 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wPid : 0x0
+07-20 19:26:21.062 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > pCallback : 0x4b3489
+07-20 19:26:21.062 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > version : 0xff(but now do not used)
+07-20 19:26:21.062 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1621) : SIC_GetRequestTablePid end  (tableId = 0,  pid = 0, error=0)
+07-20 19:26:21.062 D/MMCP    ( 1643): <dtv.sicache> reqInfo =0[ ../../../wulijiao/tvosbak/COSHIP_TVOS/component/CSDTV/service/dtv/si_cache/sic_paser.c:3490]
+
+
+07-20 19:26:21.062 D/MMCP    ( 1643): <dtv.section> req sec:pid=0h,type=0,tid=(0h,ffh,0h), ver=(0h,0h,0h)
+07-20 19:26:21.063 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:21.063 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> SIC_Load_Table : hRequestSec = 0x2, sic_lokuptable[0].reqHandle = 0x2 
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter value:00 00 00 00 00 00 00 00 
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter mask:ff 00 00 00 00 00 00 00 
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter negate:00 00 00 00 00 00 00 00 
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> CSSIC::SIC_Load_Table(clientId-17,pid-0x0,timeout-2000) OK, loadId = 2
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1670) : SIC_loader_load end ( loadId = 2, error=0)
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> [SIC_NoteLoadInfo]   g_sSicLoadId[0]:table_id:0,table_id_extension:65535,loadId:2  g_sSicLoadId[0].m_pCallback = 0x4b3489  
+
+
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> SILoader: To CSSICLoadTable() :
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> SILoader: To CSSICLoadTableByFreq() :
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwDeviceId : 0
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwFreq : 0
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > ucTableId : 1
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wTableIdExt : 65535
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwTimeOutMs : 1500
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wPid : 0x1
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > pCallback : 0x4b3f19
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > version : 0xff(but now do not used)
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1621) : SIC_GetRequestTablePid end  (tableId = 1,  pid = 1, error=0)
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.sicache> reqInfo =0[ ../../../wulijiao/tvosbak/COSHIP_TVOS/component/CSDTV/service/dtv/si_cache/sic_paser.c:3490]
+
+
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.section> req sec:pid=1h,type=0,tid=(1h,ffh,0h), ver=(0h,0h,0h)
+07-20 19:26:21.064 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:21.065 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:21.065 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:21.065 D/MMCP    ( 1643): <dtv.sicache> SIC_Load_Table : hRequestSec = 0x3, sic_lokuptable[1].reqHandle = 0x3 
+07-20 19:26:21.065 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter value:01 00 00 00 00 00 00 00 
+07-20 19:26:21.065 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter mask:ff 00 00 00 00 00 00 00 
+07-20 19:26:21.065 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter negate:00 00 00 00 00 00 00 00 
+07-20 19:26:21.065 D/MMCP    ( 1643): <dtv.sicache> CSSIC::SIC_Load_Table(clientId-17,pid-0x1,timeout-1500) OK, loadId = 3
+07-20 19:26:21.065 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1670) : SIC_loader_load end ( loadId = 3, error=0)
+07-20 19:26:21.065 D/MMCP    ( 1643): <dtv.sicache> [SIC_NoteLoadInfo]   g_sSicLoadId[1]:table_id:1,table_id_extension:65535,loadId:3  g_sSicLoadId[1].m_pCallback = 0x4b3f19  
+
+
+07-20 19:26:21.066 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH]SOURCE_CONNECTED
+07-20 19:26:21.067 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] Wait for tunner result--StartOneDeliverSearch:0x1!
+07-20 19:26:21.067 D/MMCP    ( 1643): <dtv.si> [USP_SEARCH] Start PAT @ 154100 
+07-20 19:26:21.067 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:21.067 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:21.067 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:21.067 D/MMCP    ( 1643): <dtv.si> [USP_SI] StartSearchWithTag SDT Timeout = 10000
+07-20 19:26:21.067 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:21.068 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:21.068 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:21.068 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent: start pat pmt sdt search success
+
+
+07-20 19:26:21.116 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3243] event.type=2
+07-20 19:26:21.116 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3284] pid=0x1, tid=0x1, tid_ext=0xffff, ver_num=3, sec_num=0, last_num=0, sic_lokuptable[1].cRepeatCount=0,cTableCount=0,cActualCount=0
+07-20 19:26:21.116 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3440]: send_event    type=34     m_dwLoadId=3 
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3454]: g_LoadMsg[0] Section2CSectionCancel(0x3)=1  loadID = 3
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> SIC_Sections_Notify:g_LoadMsg[0].m_Event.code= 17 
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> sic_loader_monitor-----while---------------------
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> sic_loader_monitor:g_LoadMsg[0]
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> SILoader:   data_receiver()
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> [data_receiver]   g_sSicLoadId[i].m_ucIsMonitor = 0
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> [sic_parseTable]----------after   wait      g_Table_user_count: 0-------------
+
+
+---------------->CAT
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> SILoader::CAT table section count = 1.
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> parseCAT::CA_system_ID = 0x606(1542)
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> parseCAT::Emm pid       = 0x51(81)
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> parseCAT::private_data_length = 0
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> parseCAT::CA_system_ID = 0x4ad2(19154)
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> parseCAT::Emm pid       = 0x52(82)
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> parseCAT::private_data_length = 0
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> SILoader::parse CAT end.
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ]   table_loaded
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ] registered cb 1 ,tableid=0x1, pid = 1,  msg=0
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> [SIC_NotifyDataReceived::1819 ] RegSicCallback  cb 0 ,tableid=0x1, msg=0
+07-20 19:26:21.117 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ]   data_receiver END !!
+
+------------->PAT
+07-20 19:26:21.125 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3243] event.type=2
+07-20 19:26:21.125 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3284] pid=0x0, tid=0x0, tid_ext=0xd, ver_num=9, sec_num=0, last_num=0, sic_lokuptable[0].cRepeatCount=0,cTableCount=0,cActualCount=0
+07-20 19:26:21.125 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3440]: send_event    type=34     m_dwLoadId=2 
+07-20 19:26:21.125 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:21.125 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3454]: g_LoadMsg[0] Section2CSectionCancel(0x2)=1  loadID = 2
+07-20 19:26:21.125 D/MMCP    ( 1643): <dtv.sicache> SIC_Sections_Notify:g_LoadMsg[0].m_Event.code= 17 
+07-20 19:26:21.125 D/MMCP    ( 1643): <dtv.si> [USP_SI] (SIPATHelper::PostEvent) PAT Callback come: 2 (0.avail, 1.timeout, 2.completed, 3.repeleated, 4.versionchanged)
+07-20 19:26:21.125 D/MMCP    ( 1643): <dtv.si> [USP_SI] (SIPATHelper::PostEvent) wServiceID=0 ,wTSID=13,wPMTPID=16!
+07-20 19:26:21.125 D/MMCP    ( 1643): <dtv.si> [USP_SI] (SIPATHelper::PostEvent) wServiceID=646 ,wTSID=13,wPMTPID=4400!
+07-20 19:26:21.126 D/MMCP    ( 1643): <dtv.si> [USP_SI] (SIPATHelper::PostEvent) wServiceID=652 ,wTSID=13,wPMTPID=4496!
+07-20 19:26:21.126 D/MMCP    ( 1643): <dtv.si> [USP_SI] (SIPATHelper::PostEvent) wServiceID=725 ,wTSID=13,wPMTPID=4384!
+07-20 19:26:21.126 D/MMCP    ( 1643): <dtv.si> [USP_SI] (SIPATHelper::PostEvent) wServiceID=737 ,wTSID=13,wPMTPID=4448!
+07-20 19:26:21.126 D/MMCP    ( 1643): <dtv.si> [USP_SI] (SIPATHelper::PostEvent) wServiceID=741 ,wTSID=13,wPMTPID=4368!
+07-20 19:26:21.126 D/MMCP    ( 1643): <dtv.si> [USP_SI] (SIPATHelper::PostEvent) wServiceID=815 ,wTSID=13,wPMTPID=4432!
+07-20 19:26:21.126 D/MMCP    ( 1643): <dtv.si> [USP_SI] (SIPATHelper::PostEvent) wServiceID=817 ,wTSID=13,wPMTPID=4416!
+07-20 19:26:21.126 D/MMCP    ( 1643): <dtv.si> [USP_SI] (SIPATHelper::PostEvent) wServiceID=831 ,wTSID=13,wPMTPID=4464!
+07-20 19:26:21.126 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+
+
+------------------->PMT
+07-20 19:26:21.126 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent: PATNotify 0 (0-Complete 1-timeout) @ 154160
+07-20 19:26:21.127 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent: PATNotify Start PMT Search service_id = 646 @ 154160
+07-20 19:26:21.127 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:21.127 D/MMCP    ( 1643): <dtv.sicache> sic_loader_monitor-----while---------------------
+07-20 19:26:21.127 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:21.127 D/MMCP    ( 1643): <dtv.sicache> sic_loader_monitor:g_LoadMsg[0]
+07-20 19:26:21.127 D/MMCP    ( 1643): <dtv.sicache> SILoader:   data_receiver()
+07-20 19:26:21.127 D/MMCP    ( 1643): <dtv.sicache> [data_receiver]   g_sSicLoadId[i].m_ucIsMonitor = 0
+07-20 19:26:21.127 D/MMCP    ( 1643): <dtv.sicache> [sic_parseTable]----------after   wait      g_Table_user_count: 0-------------
+07-20 19:26:21.127 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::718]i=0, SectionLen=48 SIC_MIN_PAT_LEN=12
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::728] dwFreq=0, dwCRC=0xa3dab12a, tsid=13
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::734] modify freq = 0, psPatImp[nPatIndex].m_dwFreq = 0
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::810] LoadId=2, VerNum=9
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::846]program_number=0 network_Pid=[0016]
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::864]program_number=[0x0286], pid=[4400],program=0x51bc5c
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent: PATNotify Start PMT Search service_id = 652 @ 154170
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::864]program_number=[0x028c], pid=[4496],program=0x51bc84
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::864]program_number=[0x02d5], pid=[4384],program=0x51bcac
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::864]program_number=[0x02e1], pid=[4448],program=0x51bcd4
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::864]program_number=[0x02e5], pid=[4368],program=0x51bcfc
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::864]program_number=[0x032f], pid=[4432],program=0x51bd24
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::864]program_number=[0x0331], pid=[4416],program=0x51bd4c
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::864]program_number=[0x033f], pid=[4464],program=0x51bd74
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::871] prog_count=8
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [SIC_iSetCurrentPatIndex_135]modify g_dwPatIndex = 0
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::897] success.
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ]   table_loaded
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ] registered cb 1 ,tableid=0x0, pid = 0,  msg=0
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> SILoader:CSSICGetProgram()m_wTsId = 13 , TSID = 0: 
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ]   data_receiver END !!
+
+------------------->PMT
+07-20 19:26:21.128 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:21.129 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:21.129 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent: PATNotify Start PMT Search service_id = 725 @ 154170
+07-20 19:26:21.129 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:21.129 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:21.130 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:21.130 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent: PATNotify Start PMT Search service_id = 737 @ 154170
+07-20 19:26:21.130 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:21.130 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:21.131 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:21.131 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent: PATNotify Start PMT Search service_id = 741 @ 154170
+07-20 19:26:21.131 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:21.131 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:21.132 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:21.132 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent: PATNotify Start PMT Search service_id = 815 @ 154170
+07-20 19:26:21.132 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:21.133 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:21.133 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:21.133 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent: PATNotify Start PMT Search service_id = 817 @ 154170
+07-20 19:26:21.133 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:21.134 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:21.134 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:21.134 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent: PATNotify Start PMT Search service_id = 831 @ 154170
+07-20 19:26:21.134 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:21.135 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:21.135 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+
+
+----------------->SDT
+07-20 19:26:21.150 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISDTHelper: SECTION_COMPLETE pSection->m_nDataLen = 335
+07-20 19:26:21.150 D/MMCP    ( 1643): <dtv.si> [ERROR] [USP_SI]service_name = ɋϯƵµ󿾬 service_id = 286 ts_id = d,nw_id=1, service_type = 1 wProvideNameLength= 5
+07-20 19:26:21.150 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent:UpdateService m_bPATTsidInvalid = 1 
+07-20 19:26:21.150 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent UpdateService service_name = [0x13 0xc8...]
+07-20 19:26:21.150 D/MMCP    ( 1643): <dtv.si> [ERROR] [USP_SI]service_name = »·ȲǦ¹٬ service_id = 28c ts_id = d,nw_id=1, service_type = 1 wProvideNameLength= 5
+07-20 19:26:21.150 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent:UpdateService m_bPATTsidInvalid = 1 
+07-20 19:26:21.150 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent UpdateService service_name = [0x13 0xbb...]
+07-20 19:26:21.150 D/MMCP    ( 1643): <dtv.si> [ERROR] [USP_SI]service_name = ²Ƹ»ͬЂ, service_id = 2d5 ts_id = d,nw_id=1, service_type = 1 wProvideNameLength= 5
+07-20 19:26:21.150 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent:UpdateService m_bPATTsidInvalid = 1 
+07-20 19:26:21.150 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent UpdateService service_name = [0x13 0xb2...]
+07-20 19:26:21.150 D/MMCP    ( 1643): <dtv.si> [ERROR] [USP_SI]service_name = ¼ӕþƵµ󿾬 service_id = 2e1 ts_id = d,nw_id=1, service_type = 1 wProvideNameLength= 5
+07-20 19:26:21.150 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent:UpdateService m_bPATTsidInvalid = 1 
+07-20 19:26:21.151 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent UpdateService service_name = [0x13 0xbc...]
+07-20 19:26:21.151 D/MMCP    ( 1643): <dtv.si> [ERROR] [USP_SI]service_name = ˩»­, service_id = 2e5 ts_id = d,nw_id=1, service_type = 1 wProvideNameLength= 5
+07-20 19:26:21.151 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent:UpdateService m_bPATTsidInvalid = 1 
+07-20 19:26:21.151 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent UpdateService service_name = [0x13 0xca...]
+07-20 19:26:21.151 D/MMCP    ( 1643): <dtv.si> [ERROR] [USP_SI]service_name = τϯ±¦¿ઠservice_id = 32f ts_id = d,nw_id=1, service_type = 1 wProvideNameLength= 5
+07-20 19:26:21.151 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent:UpdateService m_bPATTsidInvalid = 1 
+07-20 19:26:21.151 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent UpdateService service_name = [0x13 0xce...]
+07-20 19:26:21.151 D/MMCP    ( 1643): <dtv.si> [ERROR] [USP_SI]service_name = ¿¼˔՚П, service_id = 331 ts_id = d,nw_id=1, service_type = 1 wProvideNameLength= 5
+07-20 19:26:21.151 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent:UpdateService m_bPATTsidInvalid = 1 
+07-20 19:26:21.151 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent UpdateService service_name = [0x13 0xbf...]
+07-20 19:26:21.151 D/MMCP    ( 1643): <dtv.si> [ERROR] [USP_SI]service_name = 򧗱, service_id = 33f ts_id = d,nw_id=1, service_type = 1 wProvideNameLength= 5
+07-20 19:26:21.151 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent:UpdateService m_bPATTsidInvalid = 1 
+07-20 19:26:21.151 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent UpdateService service_name = [0x13 0xf6...]
+07-20 19:26:21.151 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:21.151 D/MMCP    ( 1643): <dtv.si> [USP_SI] sdt complete! 
+
+--------------->PMT
+07-20 19:26:21.155 D/MMCP    ( 1643): <dtv.si> [USP_SEARCH]SIPMTelper: [SECTION_COMPLETE] !
+07-20 19:26:21.155 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:21.155 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent PMTNotify 0 (0-Complete 1-timeout) Service ID = 741 @ 154190
+07-20 19:26:21.156 D/MMCP    ( 1643): <dtv.si> [USP_SEARCH]SIPMTelper: [SECTION_COMPLETE] !
+07-20 19:26:21.157 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:21.157 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent PMTNotify 0 (0-Complete 1-timeout) Service ID = 815 @ 154190
+07-20 19:26:21.175 D/MMCP    ( 1643): <dtv.si> [USP_SEARCH]SIPMTelper: [SECTION_COMPLETE] !
+07-20 19:26:21.176 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:21.176 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent PMTNotify 0 (0-Complete 1-timeout) Service ID = 652 @ 154210
+07-20 19:26:21.176 D/MMCP    ( 1643): <dtv.si> [USP_SEARCH]SIPMTelper: [SECTION_COMPLETE] !
+07-20 19:26:21.177 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:21.177 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent PMTNotify 0 (0-Complete 1-timeout) Service ID = 831 @ 154210
+07-20 19:26:21.179 D/MMCP    ( 1643): <dtv.si> [USP_SEARCH]SIPMTelper: [SECTION_COMPLETE] !
+07-20 19:26:21.180 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:21.180 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent PMTNotify 0 (0-Complete 1-timeout) Service ID = 725 @ 154220
+07-20 19:26:21.181 D/MMCP    ( 1643): <dtv.si> [USP_SEARCH]SIPMTelper: [SECTION_COMPLETE] !
+07-20 19:26:21.181 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:21.181 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent PMTNotify 0 (0-Complete 1-timeout) Service ID = 737 @ 154220
+07-20 19:26:21.201 D/MMCP    ( 1643): <dtv.si> [USP_SEARCH]SIPMTelper: [SECTION_COMPLETE] !
+07-20 19:26:21.202 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:21.202 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent PMTNotify 0 (0-Complete 1-timeout) Service ID = 646 @ 154240
+07-20 19:26:21.204 D/MMCP    ( 1643): <dtv.si> [USP_SEARCH]SIPMTelper: [SECTION_COMPLETE] !
+07-20 19:26:21.205 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:21.205 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent PMTNotify 0 (0-Complete 1-timeout) Service ID = 817 @ 154240
+07-20 19:26:21.205 D/MMCP    ( 1643): <dtv.si> [USP_SI] all pmt complete! 
+07-20 19:26:21.205 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH]SINotify COMPLETE
+07-20 19:26:21.206 D/MMCP    ( 1643): <dtv.si> [USP_SI] SISearchAgent: search pat pmt sdt stop
+07-20 19:26:21.206 D/MMCP    ( 1643): <dtv.si> [USP_SI] Function Stop() begin MutexWait TickCount:154240
+07-20 19:26:21.206 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH]SINotify COMPLETE ok
+07-20 19:26:21.206 D/MMCP    ( 1643): <dtv.si> [USP_SI] Function Stop() end MutexWait TickCount:154240
+07-20 19:26:21.207 D/MMCP    ( 1643): <dtv.si> [USP_SI]  SISearchAgent: search pat pmt sdt stop success
+--------------------------> pat pmt sdt
+
+
+07-20 19:26:21.207 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] Wait for SI result--StartOneDeliverSearch:0xf1!
+07-20 19:26:21.207 D/MMCP    ( 1643): <dtv.search> [ERROR] [USP_Search] add deliver to dm , sourceType=0x4
+07-20 19:26:21.207 D/MMCP    ( 1643): <dtv.search> [ERROR] AddCommonDeliver -- hDataTransponder = 0xb4185948, hDataContainer = 0xb4183028,fre=574000
+07-20 19:26:21.207 D/MMCP    ( 1643): <dtv.search> [ERROR] AddCommonDeliver -- tempSourceID:[0x1,0xd] 1
+07-20 19:26:21.207 D/MMCP    ( 1643): <dtv.search> [ERROR] AddCommonDeliver -- nRet = 0x1, hDataTransponder = 0xb4185948, hDataContainer = 0xb4183028, hData = 0xb4185948
+07-20 19:26:21.207 D/MMCP    ( 1643): <dtv.search> [ERROR] AddCommonDeliver -- stSourceID.tsid = 0xd
+
+07-20 19:26:21.207 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] PATPMT: index = 0 hTransd = 0xb4185948 nitVersion = 0xff
+07-20 19:26:21.207 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] PATPMT: index = 0 hTransd = 0xb4185948 sdtVersion = 0x5
+07-20 19:26:21.207 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] serviceName = [0x13 0xc8...]
+07-20 19:26:21.207 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] serviceID = 0x286 service_type = 0x1 ts_id = 0xd oriNetID = 0x1
+07-20 19:26:21.207 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData g_bSupportMPlayer: 0!
+07-20 19:26:21.207 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 2!
+07-20 19:26:21.207 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 3!
+07-20 19:26:21.208 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] serviceName = [0x13 0xbb...]
+07-20 19:26:21.208 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] serviceID = 0x28c service_type = 0x1 ts_id = 0xd oriNetID = 0x1
+07-20 19:26:21.208 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData g_bSupportMPlayer: 0!
+07-20 19:26:21.208 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 2!
+07-20 19:26:21.208 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 4!
+07-20 19:26:21.208 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH]ServiceID = 0x28c Audio_Index=18 
+07-20 19:26:21.209 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] serviceName = [0x13 0xb2...]
+07-20 19:26:21.209 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] serviceID = 0x2d5 service_type = 0x1 ts_id = 0xd oriNetID = 0x1
+07-20 19:26:21.209 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData g_bSupportMPlayer: 0!
+07-20 19:26:21.209 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 2!
+07-20 19:26:21.209 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 4!
+07-20 19:26:21.209 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] serviceName = [0x13 0xbc...]
+07-20 19:26:21.209 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] serviceID = 0x2e1 service_type = 0x1 ts_id = 0xd oriNetID = 0x1
+07-20 19:26:21.210 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData g_bSupportMPlayer: 0!
+07-20 19:26:21.210 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 2!
+07-20 19:26:21.210 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 3!
+07-20 19:26:21.210 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] serviceName = [0x13 0xca...]
+07-20 19:26:21.210 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] serviceID = 0x2e5 service_type = 0x1 ts_id = 0xd oriNetID = 0x1
+07-20 19:26:21.210 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData g_bSupportMPlayer: 0!
+07-20 19:26:21.210 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 5!
+07-20 19:26:21.210 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 2!
+07-20 19:26:21.210 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 4!
+07-20 19:26:21.210 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH]ServiceID = 0x2e5 Audio_Index=18 
+07-20 19:26:21.211 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] serviceName = [0x13 0xce...]
+07-20 19:26:21.211 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] serviceID = 0x32f service_type = 0x1 ts_id = 0xd oriNetID = 0x1
+07-20 19:26:21.211 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData g_bSupportMPlayer: 0!
+07-20 19:26:21.211 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 2!
+07-20 19:26:21.211 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 4!
+07-20 19:26:21.211 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH]ServiceID = 0x32f Audio_Index=18 
+07-20 19:26:21.211 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] serviceName = [0x13 0xbf...]
+07-20 19:26:21.211 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] serviceID = 0x331 service_type = 0x1 ts_id = 0xd oriNetID = 0x1
+07-20 19:26:21.211 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData g_bSupportMPlayer: 0!
+07-20 19:26:21.211 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 2!
+07-20 19:26:21.211 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 3!
+07-20 19:26:21.212 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] serviceName = [0x13 0xf6...]
+07-20 19:26:21.212 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] serviceID = 0x33f service_type = 0x1 ts_id = 0xd oriNetID = 0x1
+07-20 19:26:21.212 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData g_bSupportMPlayer: 0!
+07-20 19:26:21.212 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 5!
+07-20 19:26:21.212 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 2!
+07-20 19:26:21.212 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH] AddServiceData m_bElemType: 4!
+07-20 19:26:21.212 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH]ServiceID = 0x33f Audio_Index=18 
+07-20 19:26:24.277 D/MMCP    ( 1643): <dtv.search> [USP_SEARCH SearchThread 704]search action 1 end!
+
+
+201805111738=======++++ vpss:0,0!
+Win0100 switch to VPSS component channel
+07-20 19:26:27.308 D/MMCP    ( 1643): <dtv.sicache> SILoader: To CSSICLoadTable() :
+07-20 19:26:27.308 D/MMCP    ( 1643): <dtv.sicache> SILoader: To CSSICLoadTableByFreq() :
+07-20 19:26:27.308 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwDeviceId : 0
+07-20 19:26:27.308 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwFreq : 0
+07-20 19:26:27.308 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > ucTableId : 0
+07-20 19:26:27.308 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wTableIdExt : 65535
+07-20 19:26:27.308 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwTimeOutMs : 2000
+07-20 19:26:27.309 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wPid : 0x0
+07-20 19:26:27.309 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > pCallback : 0x4b3489
+07-20 19:26:27.309 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > version : 0xff(but now do not used)
+07-20 19:26:27.309 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1621) : SIC_GetRequestTablePid end  (tableId = 0,  pid = 0, error=0)
+07-20 19:26:27.309 D/MMCP    ( 1643): <dtv.sicache> reqInfo =0[ ../../../wulijiao/tvosbak/COSHIP_TVOS/component/CSDTV/service/dtv/si_cache/sic_paser.c:3490]
+07-20 19:26:27.309 D/MMCP    ( 1643): <dtv.section> req sec:pid=0h,type=0,tid=(0h,ffh,0h), ver=(0h,0h,0h)
+07-20 19:26:27.309 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.310 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.310 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.310 D/MMCP    ( 1643): <dtv.sicache> SIC_Load_Table : hRequestSec = 0x4, sic_lokuptable[0].reqHandle = 0x4 
+07-20 19:26:27.310 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter value:00 00 00 00 00 00 00 00 
+07-20 19:26:27.310 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter mask:ff 00 00 00 00 00 00 00 
+07-20 19:26:27.310 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter negate:00 00 00 00 00 00 00 00 
+07-20 19:26:27.310 D/MMCP    ( 1643): <dtv.sicache> CSSIC::SIC_Load_Table(clientId-17,pid-0x0,timeout-2000) OK, loadId = 4
+07-20 19:26:27.310 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1670) : SIC_loader_load end ( loadId = 4, error=0)
+07-20 19:26:27.310 D/MMCP    ( 1643): <dtv.sicache> [SIC_NoteLoadInfo]   g_sSicLoadId[0]:table_id:0,table_id_extension:65535,loadId:4  g_sSicLoadId[0].m_pCallback = 0x4b3489  
+07-20 19:26:27.313 D/MMCP    ( 1643): <CS_CA> [ERROR] Assertion: "(psCAInfo->stServiceInfo.m_awPid[0]) == nVideoPID" failed, in file ../../../wulijiao/tvosbak/COSHIP_TVOS/component/CSDTV/service/dtv/si_cache/cscainject.c, line 1194
+07-20 19:26:27.313 D/MMCP    ( 1643): <CS_CA> [ERROR] Assertion: "psCAInfo->stServiceInfo.m_awPid[1] == nAudioPID" failed, in file ../../../wulijiao/tvosbak/COSHIP_TVOS/component/CSDTV/service/dtv/si_cache/cscainject.c, line 1195
+07-20 19:26:27.313 D/MMCP    ( 1643): <dtv.sicache> SILoader: To CSSICLoadTable() :
+07-20 19:26:27.313 D/MMCP    ( 1643): <dtv.sicache> SILoader: To CSSICLoadTableByFreq() :
+07-20 19:26:27.313 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwDeviceId : 0
+07-20 19:26:27.313 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwFreq : 0
+07-20 19:26:27.314 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > ucTableId : 0
+07-20 19:26:27.314 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wTableIdExt : 65535
+07-20 19:26:27.314 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwTimeOutMs : 2000
+07-20 19:26:27.314 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wPid : 0x0
+07-20 19:26:27.314 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > pCallback : 0x4b3489
+07-20 19:26:27.314 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > version : 0xff(but now do not used)
+07-20 19:26:27.314 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1621) : SIC_GetRequestTablePid end  (tableId = 0,  pid = 0, error=0)
+07-20 19:26:27.314 D/MMCP    ( 1643): <dtv.sicache> reqInfo =0[ ../../../wulijiao/tvosbak/COSHIP_TVOS/component/CSDTV/service/dtv/si_cache/sic_paser.c:3490]
+07-20 19:26:27.314 D/MMCP    ( 1643): <dtv.section> req sec:pid=0h,type=0,tid=(0h,ffh,0h), ver=(0h,0h,0h)
+07-20 19:26:27.314 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.315 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.315 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.315 D/MMCP    ( 1643): <dtv.sicache> SIC_Load_Table : hRequestSec = 0x5, sic_lokuptable[1].reqHandle = 0x5 
+07-20 19:26:27.315 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter value:00 00 00 00 00 00 00 00 
+07-20 19:26:27.315 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter mask:ff 00 00 00 00 00 00 00 
+07-20 19:26:27.315 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter negate:00 00 00 00 00 00 00 00 
+07-20 19:26:27.315 D/MMCP    ( 1643): <dtv.sicache> CSSIC::SIC_Load_Table(clientId-17,pid-0x0,timeout-2000) OK, loadId = 5
+07-20 19:26:27.315 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1670) : SIC_loader_load end ( loadId = 5, error=0)
+07-20 19:26:27.315 D/MMCP    ( 1643): <dtv.sicache> [SIC_NoteLoadInfo]   g_sSicLoadId[1]:table_id:0,table_id_extension:65535,loadId:5  g_sSicLoadId[1].m_pCallback = 0x4b3489  
+07-20 19:26:27.315 D/MMCP    ( 1643): <dtv.sicache> SILoader: To CSSICLoadTable() :
+07-20 19:26:27.315 D/MMCP    ( 1643): <dtv.sicache> SILoader: To CSSICLoadTableByFreq() :
+07-20 19:26:27.315 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwDeviceId : 0
+07-20 19:26:27.315 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwFreq : 0
+07-20 19:26:27.315 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > ucTableId : 1
+07-20 19:26:27.316 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wTableIdExt : 65535
+07-20 19:26:27.316 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwTimeOutMs : 1500
+07-20 19:26:27.316 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wPid : 0x1
+07-20 19:26:27.316 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > pCallback : 0x4b3f19
+07-20 19:26:27.316 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > version : 0xff(but now do not used)
+07-20 19:26:27.316 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1621) : SIC_GetRequestTablePid end  (tableId = 1,  pid = 1, error=0)
+07-20 19:26:27.316 D/MMCP    ( 1643): <dtv.sicache> reqInfo =0[ ../../../wulijiao/tvosbak/COSHIP_TVOS/component/CSDTV/service/dtv/si_cache/sic_paser.c:3490]
+07-20 19:26:27.316 D/MMCP    ( 1643): <dtv.section> req sec:pid=1h,type=0,tid=(1h,ffh,0h), ver=(0h,0h,0h)
+07-20 19:26:27.316 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.323 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.324 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.324 D/MMCP    ( 1643): <dtv.sicache> SIC_Load_Table : hRequestSec = 0x6, sic_lokuptable[2].reqHandle = 0x6 
+07-20 19:26:27.324 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter value:01 00 00 00 00 00 00 00 
+07-20 19:26:27.324 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter mask:ff 00 00 00 00 00 00 00 
+07-20 19:26:27.324 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter negate:00 00 00 00 00 00 00 00 
+07-20 19:26:27.324 D/MMCP    ( 1643): <dtv.sicache> CSSIC::SIC_Load_Table(clientId-17,pid-0x1,timeout-1500) OK, loadId = 6
+07-20 19:26:27.324 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1670) : SIC_loader_load end ( loadId = 6, error=0)
+07-20 19:26:27.324 D/MMCP    ( 1643): <dtv.sicache> [SIC_NoteLoadInfo]   g_sSicLoadId[2]:table_id:1,table_id_extension:65535,loadId:6  g_sSicLoadId[2].m_pCallback = 0x4b3f19  
+07-20 19:26:27.330 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3243] event.type=2
+07-20 19:26:27.330 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3284] pid=0x0, tid=0x0, tid_ext=0xd, ver_num=9, sec_num=0, last_num=0, sic_lokuptable[0].cRepeatCount=0,cTableCount=0,cActualCount=0
+07-20 19:26:27.330 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3440]: send_event    type=34     m_dwLoadId=4 
+07-20 19:26:27.330 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:27.330 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3454]: g_LoadMsg[0] Section2CSectionCancel(0x4)=1  loadID = 4
+07-20 19:26:27.330 D/MMCP    ( 1643): <dtv.sicache> SIC_Sections_Notify:g_LoadMsg[0].m_Event.code= 17 
+07-20 19:26:27.330 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3243] event.type=2
+07-20 19:26:27.330 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3284] pid=0x0, tid=0x0, tid_ext=0xd, ver_num=9, sec_num=0, last_num=0, sic_lokuptable[1].cRepeatCount=0,cTableCount=0,cActualCount=0
+07-20 19:26:27.330 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3440]: send_event    type=34     m_dwLoadId=5 
+07-20 19:26:27.330 D/MMCP    ( 1643): <dtv.sicache> sic_loader_monitor-----while---------------------
+07-20 19:26:27.330 D/MMCP    ( 1643): <dtv.sicache> sic_loader_monitor:g_LoadMsg[0]
+07-20 19:26:27.330 D/MMCP    ( 1643): <dtv.sicache> SILoader:   data_receiver()
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+
+
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3454]: g_LoadMsg[1] Section2CSectionCancel(0x5)=1  loadID = 5
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> SIC_Sections_Notify:g_LoadMsg[1].m_Event.code= 17 
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> [data_receiver]   g_sSicLoadId[i].m_ucIsMonitor = 0
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> [sic_parseTable]----------after   wait      g_Table_user_count: 0-------------
+
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::718]i=0, SectionLen=48 SIC_MIN_PAT_LEN=12
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::728] dwFreq=0, dwCRC=0xa3dab12a, tsid=13
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::734] modify freq = 0, psPatImp[nPatIndex].m_dwFreq = 0
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::761]PAT's version_num  not change!
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> [SIC_iSetCurrentPatIndex_135]modify g_dwPatIndex = 0
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ]   table_loaded
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ] registered cb 1 ,tableid=0x0, pid = 0,  msg=0
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> SILoader:CSSICGetProgram():pPat->m_ucProgCount=8 
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> [ERROR] g_dwPatIndex  = 0, pid = 0xffff
+
+
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> SILoader: To CSSICLoadTable() :
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> SILoader: To CSSICLoadTableByFreq() :
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwDeviceId : 0
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwFreq : 0
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > ucTableId : 2
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wTableIdExt : 65535
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwTimeOutMs : 2000
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wPid : 0x1130
+07-20 19:26:27.333 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > pCallback : 0x4b3461
+07-20 19:26:27.334 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > version : 0xff(but now do not used)
+07-20 19:26:27.334 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1621) : SIC_GetRequestTablePid end  (tableId = 2,  pid = 4400, error=0)
+07-20 19:26:27.334 D/MMCP    ( 1643): <dtv.sicache> reqInfo =0[ ../../../wulijiao/tvosbak/COSHIP_TVOS/component/CSDTV/service/dtv/si_cache/sic_paser.c:3490]
+07-20 19:26:27.334 D/MMCP    ( 1643): <dtv.section> req sec:pid=1130h,type=0,tid=(2h,ffh,0h), ver=(0h,0h,0h)
+07-20 19:26:27.334 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> SIC_Load_Table : hRequestSec = 0x7, sic_lokuptable[3].reqHandle = 0x7 
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter value:02 00 00 00 00 00 00 00 
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter mask:ff 00 00 00 00 00 00 00 
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter negate:00 00 00 00 00 00 00 00 
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> CSSIC::SIC_Load_Table(clientId-17,pid-0x1130,timeout-2000) OK, loadId = 7
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1670) : SIC_loader_load end ( loadId = 7, error=0)
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> [SIC_NoteLoadInfo]   g_sSicLoadId[0]:table_id:2,table_id_extension:65535,loadId:7  g_sSicLoadId[0].m_pCallback = 0x4b3461  
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> SILoader:  CSSICCancelLoad(4) 
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache>  CSSICCancelLoad 4 failed @
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ]   data_receiver END !!
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> sic_loader_monitor:g_LoadMsg[1]
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> SILoader:   data_receiver()
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> [data_receiver]   g_sSicLoadId[i].m_ucIsMonitor = 0
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> [sic_parseTable]----------after   wait      g_Table_user_count: 0-------------
+
+
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::718]i=0, SectionLen=48 SIC_MIN_PAT_LEN=12
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::728] dwFreq=0, dwCRC=0xa3dab12a, tsid=13
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::734] modify freq = 0, psPatImp[nPatIndex].m_dwFreq = 0
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePAT::761]PAT's version_num  not change!
+
+
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> [SIC_iSetCurrentPatIndex_135]modify g_dwPatIndex = 0
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ]   table_loaded
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ] registered cb 1 ,tableid=0x0, pid = 0,  msg=0
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> SILoader:CSSICGetProgram():pPat->m_ucProgCount=8 
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> [ERROR] g_dwPatIndex  = 0, pid = 0xffff
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> SILoader: To CSSICLoadTable() :
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> SILoader: To CSSICLoadTableByFreq() :
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwDeviceId : 0
+07-20 19:26:27.335 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwFreq : 0
+07-20 19:26:27.336 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > ucTableId : 2
+07-20 19:26:27.336 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wTableIdExt : 65535
+07-20 19:26:27.336 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwTimeOutMs : 2000
+07-20 19:26:27.336 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wPid : 0x1130
+07-20 19:26:27.336 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > pCallback : 0x4b3461
+07-20 19:26:27.336 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > version : 0xff(but now do not used)
+07-20 19:26:27.336 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1621) : SIC_GetRequestTablePid end  (tableId = 2,  pid = 4400, error=0)
+07-20 19:26:27.336 D/MMCP    ( 1643): <dtv.sicache> reqInfo =0[ ../../../wulijiao/tvosbak/COSHIP_TVOS/component/CSDTV/service/dtv/si_cache/sic_paser.c:3490]
+07-20 19:26:27.336 D/MMCP    ( 1643): <dtv.section> req sec:pid=1130h,type=0,tid=(2h,ffh,0h), ver=(0h,0h,0h)
+07-20 19:26:27.336 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.336 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.336 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.336 D/MMCP    ( 1643): <dtv.sicache> SIC_Load_Table : hRequestSec = 0x8, sic_lokuptable[0].reqHandle = 0x8 
+07-20 19:26:27.337 D/MMCP    ( 1643): <dtv.section> req sec:pid=10h,type=0,tid=(40h,ffh,0h), ver=(0h,0h,0h)
+07-20 19:26:27.337 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.338 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter value:02 00 00 00 00 00 00 00 
+07-20 19:26:27.338 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter mask:ff 00 00 00 00 00 00 00 
+07-20 19:26:27.338 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter negate:00 00 00 00 00 00 00 00 
+07-20 19:26:27.338 D/MMCP    ( 1643): <dtv.sicache> CSSIC::SIC_Load_Table(clientId-17,pid-0x1130,timeout-2000) OK, loadId = 8
+07-20 19:26:27.338 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1670) : SIC_loader_load end ( loadId = 8, error=0)
+07-20 19:26:27.338 D/MMCP    ( 1643): <dtv.sicache> [SIC_NoteLoadInfo]   g_sSicLoadId[1]:table_id:2,table_id_extension:65535,loadId:8  g_sSicLoadId[1].m_pCallback = 0x4b3461  
+07-20 19:26:27.338 D/MMCP    ( 1643): <dtv.sicache> SILoader:  CSSICCancelLoad(5) 
+07-20 19:26:27.338 D/MMCP    ( 1643): <dtv.sicache>  CSSICCancelLoad 5 failed @
+07-20 19:26:27.338 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ]   data_receiver END !!
+07-20 19:26:27.341 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.341 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.348 D/MMCP    ( 1643): <dtv.sicache> sic_loader_monitor-----while---------------------
+07-20 19:26:27.355 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3243] event.type=2
+07-20 19:26:27.355 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3284] pid=0x1, tid=0x1, tid_ext=0xffff, ver_num=3, sec_num=0, last_num=0, sic_lokuptable[2].cRepeatCount=0,cTableCount=0,cActualCount=0
+07-20 19:26:27.355 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3440]: send_event    type=34     m_dwLoadId=6 
+07-20 19:26:27.357 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:27.357 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3454]: g_LoadMsg[0] Section2CSectionCancel(0x6)=1  loadID = 6
+07-20 19:26:27.357 D/MMCP    ( 1643): <dtv.sicache> SIC_Sections_Notify:g_LoadMsg[0].m_Event.code= 17 
+07-20 19:26:27.358 D/MMCP    ( 1643): <dtv.sicache> sic_loader_monitor-----while---------------------
+07-20 19:26:27.358 D/MMCP    ( 1643): <dtv.sicache> sic_loader_monitor:g_LoadMsg[0]
+07-20 19:26:27.358 D/MMCP    ( 1643): <dtv.sicache> SILoader:   data_receiver()
+07-20 19:26:27.358 D/MMCP    ( 1643): <dtv.sicache> [data_receiver]   g_sSicLoadId[i].m_ucIsMonitor = 0
+07-20 19:26:27.358 D/MMCP    ( 1643): <dtv.sicache> [sic_parseTable]----------after   wait      g_Table_user_count: 0-------------
+
+
+07-20 19:26:27.358 D/MMCP    ( 1643): <dtv.sicache> SILoader::CAT table section count = 1.
+07-20 19:26:27.358 D/MMCP    ( 1643): <dtv.sicache> parseCAT::CA_system_ID = 0x606(1542)
+07-20 19:26:27.358 D/MMCP    ( 1643): <dtv.sicache> parseCAT::Emm pid       = 0x51(81)
+07-20 19:26:27.358 D/MMCP    ( 1643): <dtv.sicache> parseCAT::private_data_length = 0
+07-20 19:26:27.358 D/MMCP    ( 1643): <dtv.sicache> parseCAT::CA_system_ID = 0x4ad2(19154)
+07-20 19:26:27.358 D/MMCP    ( 1643): <dtv.sicache> parseCAT::Emm pid       = 0x52(82)
+07-20 19:26:27.359 D/MMCP    ( 1643): <dtv.sicache> parseCAT::private_data_length = 0
+
+
+07-20 19:26:27.359 D/MMCP    ( 1643): <dtv.sicache> SILoader::parse CAT end.
+07-20 19:26:27.359 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ]   table_loaded
+07-20 19:26:27.359 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ] registered cb 1 ,tableid=0x1, pid = 1,  msg=0
+07-20 19:26:27.359 D/MMCP    ( 1643): <dtv.sicache> [SIC_NotifyDataReceived::1819 ] RegSicCallback  cb 0 ,tableid=0x1, msg=0
+07-20 19:26:27.359 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ]   data_receiver END !!
+07-20 19:26:27.406 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3243] event.type=2
+07-20 19:26:27.406 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3284] pid=0x1130, tid=0x2, tid_ext=0x286, ver_num=31, sec_num=0, last_num=0, sic_lokuptable[3].cRepeatCount=0,cTableCount=0,cActualCount=0
+07-20 19:26:27.406 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3440]: send_event    type=34     m_dwLoadId=7 
+07-20 19:26:27.406 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:27.406 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3454]: g_LoadMsg[0] Section2CSectionCancel(0x7)=1  loadID = 7
+07-20 19:26:27.406 D/MMCP    ( 1643): <dtv.sicache> SIC_Sections_Notify:g_LoadMsg[0].m_Event.code= 17 
+07-20 19:26:27.406 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3243] event.type=2
+07-20 19:26:27.406 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3284] pid=0x1130, tid=0x2, tid_ext=0x286, ver_num=31, sec_num=0, last_num=0, sic_lokuptable[0].cRepeatCount=0,cTableCount=0,cActualCount=0
+07-20 19:26:27.406 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3440]: send_event    type=34     m_dwLoadId=8 
+07-20 19:26:27.407 D/MMCP    ( 1643): <dtv.sicache> sic_loader_monitor-----while---------------------
+07-20 19:26:27.407 D/MMCP    ( 1643): <dtv.sicache> sic_loader_monitor:g_LoadMsg[0]
+07-20 19:26:27.407 D/MMCP    ( 1643): <dtv.sicache> SILoader:   data_receiver()
+07-20 19:26:27.410 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3454]: g_LoadMsg[1] Section2CSectionCancel(0x8)=1  loadID = 8
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> SIC_Sections_Notify:g_LoadMsg[1].m_Event.code= 17 
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [data_receiver]   g_sSicLoadId[i].m_ucIsMonitor = 0
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parseTable]----------after   wait      g_Table_user_count: 0-------------
+
+
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [SIC_iGetCurrentPatIndexByLoadID_101]   ENTER dwLoadId = 7
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [SIC_iGetCurrentPatIndexByLoadID_109]   index = 0
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [SIC_iGetCurrentPatIndexByLoadID_119]   dwDeviceId = 0
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [ERROR] [iCheckCurrentPatByDevice_1572]dwDeviceId=0
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [ERROR] [iCheckCurrentPatByDevice_1577]s_sDevice[0].m_dwDeviceId=0
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [ERROR] [iCheckCurrentPatByDevice_1595]dwCurPatIndext = 0
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1178] dwCurPatIndex(0)  by device
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1188::0] table section count = 1.  tableId (2), pid(4400)
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1225]  program_number = 646
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1229]pPat->m_ucProgCount = 8
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1232]pPat->m_ppsProgList[j]->m_wProgNum= 646
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_free_progEs::271] bFreeSelf = 0.  isAmt (0), nEsCount(0)
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_free_prog::324] bFreeSelf (0), pnEsCount (0)  
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1245]:: es_count = 0, program_number= 646
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1268] program_number : [0x0286]
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1269]       PCR_PID : [0x1131]
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1270] m_wPmtPid : [4400]
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1272]program_info_length : [12], section_length:35
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1283]version_number : [31]
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1284] Elementary Streams found:
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parseES::1090::0) (nLen:10) (*pnEsCount:512)
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parseES::1122::0] --(es_ElementaryPid :4401)
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parseES::1128::0] - stream_type:[0x02], es_pid:[0x1131], length:[0000]
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parseES::1122::0] --(es_ElementaryPid :4402)
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parseES::1128::0] - stream_type:[0x03], es_pid:[0x1132], length:[0000]
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parseES::1143::0] -end.
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parseAitES::962] (pmt_pid:4400),table nEsCount = 2.
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parseAitES::1047]*****ait_count=0
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parseAitES::1069] end. ppAitList (0x0)
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1341]****ait_count=0, es_count= 2
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1347] end. 
+07-20 19:26:27.411 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ]   table_loaded
+07-20 19:26:27.412 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ] registered cb 1 ,tableid=0x2, pid = 4400,  msg=0
+07-20 19:26:27.412 D/MMCP    ( 1643): <dtv.sicache> SILoader:  CSSICCancelLoad(7) 
+07-20 19:26:27.412 D/MMCP    ( 1643): <dtv.sicache>  CSSICCancelLoad 7 failed @
+07-20 19:26:27.412 D/MMCP    ( 1643): <dtv.sicache> [SIC_NotifyDataReceived::1819 ] RegSicCallback  cb 0 ,tableid=0x2, msg=0
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ]   data_receiver END !!
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> sic_loader_monitor:g_LoadMsg[1]
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> SILoader:   data_receiver()
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [data_receiver]   g_sSicLoadId[i].m_ucIsMonitor = 0
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [sic_parseTable]----------after   wait      g_Table_user_count: 0-------------
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [SIC_iGetCurrentPatIndexByLoadID_101]   ENTER dwLoadId = 8
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [SIC_iGetCurrentPatIndexByLoadID_109]   index = 1
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [SIC_iGetCurrentPatIndexByLoadID_119]   dwDeviceId = 0
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [ERROR] [iCheckCurrentPatByDevice_1572]dwDeviceId=0
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [ERROR] [iCheckCurrentPatByDevice_1577]s_sDevice[0].m_dwDeviceId=0
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [ERROR] [iCheckCurrentPatByDevice_1595]dwCurPatIndext = 0
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1178] dwCurPatIndex(0)  by device
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1188::0] table section count = 1.  tableId (2), pid(4400)
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1225]  program_number = 646
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1229]pPat->m_ucProgCount = 8
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1232]pPat->m_ppsProgList[j]->m_wProgNum= 646
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [sic_free_progEs::271] bFreeSelf = 0.  isAmt (0), nEsCount(0)
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [sic_free_prog::324] bFreeSelf (0), pnEsCount (0)  
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1245]:: es_count = 0, program_number= 646
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1268] program_number : [0x0286]
+07-20 19:26:27.413 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1269]       PCR_PID : [0x1131]
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1270] m_wPmtPid : [4400]
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1272]program_info_length : [12], section_length:35
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1283]version_number : [31]
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1284] Elementary Streams found:
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [sic_parseES::1090::0) (nLen:10) (*pnEsCount:512)
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [sic_parseES::1122::0] --(es_ElementaryPid :4401)
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [sic_parseES::1128::0] - stream_type:[0x02], es_pid:[0x1131], length:[0000]
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [sic_parseES::1122::0] --(es_ElementaryPid :4402)
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [sic_parseES::1128::0] - stream_type:[0x03], es_pid:[0x1132], length:[0000]
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [sic_parseES::1143::0] -end.
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [sic_parseAitES::962] (pmt_pid:4400),table nEsCount = 2.
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [sic_parseAitES::1047]*****ait_count=0
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [sic_parseAitES::1069] end. ppAitList (0x0)
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1341]****ait_count=0, es_count= 2
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [sic_parsePMT::1347] end. 
+
+
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ]   table_loaded
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ] registered cb 1 ,tableid=0x2, pid = 4400,  msg=0
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache> SILoader:  CSSICCancelLoad(8) 
+07-20 19:26:27.414 D/MMCP    ( 1643): <dtv.sicache>  CSSICCancelLoad 8 failed @
+07-20 19:26:27.417 D/MMCP    ( 1643): <dtv.section> req sec:pid=51h,type=0,tid=(82h,ffh,0h), ver=(0h,0h,0h)
+07-20 19:26:27.417 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.420 D/MMCP    ( 1643): <dtv.sicache> [SIC_NotifyDataReceived::1819 ] RegSicCallback  cb 0 ,tableid=0x2, msg=0
+07-20 19:26:27.420 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.420 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.420 D/MMCP    ( 1643): <dtv.sicache> [data_receiver ]   data_receiver END !!
+07-20 19:26:27.422 D/MMCP    ( 1643): <dtv.section> req sec:pid=113ch,type=0,tid=(80h,fch,0h), ver=(0h,0h,0h)
+07-20 19:26:27.422 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.429 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.430 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:27.431 D/MMCP    ( 1643): <dtv.section> req sec:pid=51h,type=0,tid=(82h,ffh,0h), ver=(0h,0h,0h)
+07-20 19:26:27.431 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.431 D/MMCP    ( 1643): <dtv.sicache> sic_loader_monitor-----while---------------------
+07-20 19:26:27.432 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.432 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.432 D/MMCP    ( 1643): <dtv.section> req sec:pid=51h,type=0,tid=(82h,ffh,0h), ver=(bbh,ffh,0h)
+07-20 19:26:27.432 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.433 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.433 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.433 D/MMCP    ( 1643): <dtv.section> req sec:pid=51h,type=0,tid=(82h,ffh,0h), ver=(0h,0h,0h)
+07-20 19:26:27.433 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.434 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.434 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.434 D/MMCP    ( 1643): <dtv.section> req sec:pid=51h,type=0,tid=(82h,ffh,0h), ver=(17h,ffh,0h)
+07-20 19:26:27.434 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.435 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.435 D/MMCP    ( 1643): <dtv.section> req sec:pid=51h,type=0,tid=(82h,ffh,0h), ver=(10h,f0h,0h)
+07-20 19:26:27.435 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.436 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.436 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.436 D/MMCP    ( 1643): <dtv.section> req sec:pid=51h,type=0,tid=(82h,ffh,0h), ver=(f8h,ffh,0h)
+07-20 19:26:27.436 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.436 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.436 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.437 D/MMCP    ( 1643): <dtv.section> req sec:pid=51h,type=0,tid=(82h,ffh,0h), ver=(f0h,f0h,0h)
+07-20 19:26:27.437 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.437 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.437 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.632 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:27.632 D/MMCP    ( 1643): <dtv.section> req sec:pid=113ch,type=0,tid=(81h,ffh,0h), ver=(0h,0h,0h)
+07-20 19:26:27.632 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.633 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.633 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.715 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:27.716 D/MMCP    ( 1643): <dtv.section> req sec:pid=10h,type=0,tid=(40h,ffh,0h), ver=(ch,3eh,ffh)
+07-20 19:26:27.716 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.717 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.717 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+
+
+07-20 19:26:27.769 D/MMCP    ( 1643): <dtv.sicache> CSSICGetNetwork    wNetId=0xffff
+07-20 19:26:27.770 D/MMCP    ( 1643): <dtv.sicache> SILoader: To CSSICLoadTableByFreq() :
+07-20 19:26:27.770 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwDeviceId : 0
+07-20 19:26:27.770 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwFreq : 0
+07-20 19:26:27.770 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > ucTableId : 64
+07-20 19:26:27.770 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wTableIdExt : 65535
+07-20 19:26:27.770 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwTimeOutMs : 10000
+07-20 19:26:27.770 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wPid : 0x10
+07-20 19:26:27.770 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > pCallback : 0x468ae1
+07-20 19:26:27.770 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > version : 0xff(but now do not used)
+07-20 19:26:27.770 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1621) : SIC_GetRequestTablePid end  (tableId = 64,  pid = 16, error=0)
+07-20 19:26:27.770 D/MMCP    ( 1643): <dtv.sicache> reqInfo =0[ ../../../wulijiao/tvosbak/COSHIP_TVOS/component/CSDTV/service/dtv/si_cache/sic_paser.c:3490]
+07-20 19:26:27.770 D/MMCP    ( 1643): <dtv.section> req sec:pid=10h,type=0,tid=(40h,ffh,0h), ver=(0h,0h,0h)
+07-20 19:26:27.770 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.770 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.771 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.771 D/MMCP    ( 1643): <dtv.sicache> SIC_Load_Table : hRequestSec = 0x15, sic_lokuptable[0].reqHandle = 0x15 
+07-20 19:26:27.771 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter value:40 00 00 00 00 00 00 00 
+07-20 19:26:27.771 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter mask:ff 00 00 00 00 00 00 00 
+07-20 19:26:27.771 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter negate:00 00 00 00 00 00 00 00 
+07-20 19:26:27.771 D/MMCP    ( 1643): <dtv.sicache> CSSIC::SIC_Load_Table(clientId-17,pid-0x10,timeout-10000) OK, loadId = 9
+07-20 19:26:27.771 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1670) : SIC_loader_load end ( loadId = 9, error=0)
+07-20 19:26:27.771 D/MMCP    ( 1643): <dtv.sicache> [SIC_NoteLoadInfo]   g_sSicLoadId[0]:table_id:64,table_id_extension:65535,loadId:9  g_sSicLoadId[0].m_pCallback = 0x468ae1  
+07-20 19:26:27.771 D/MMCP    ( 1643): <dtv.sicache> CSSICGetNetwork    wNetId=0xffff
+07-20 19:26:27.771 D/MMCP    ( 1643): <dtv.sicache> SILoader: To CSSICLoadTableByFreq() :
+07-20 19:26:27.771 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwDeviceId : 0
+07-20 19:26:27.771 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwFreq : 0
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > ucTableId : 64
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wTableIdExt : 65535
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > dwTimeOutMs : 10000
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > wPid : 0x10
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > pCallback : 0x468ae1
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.sicache> SILoader:   > version : 0xff(but now do not used)
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1621) : SIC_GetRequestTablePid end  (tableId = 64,  pid = 16, error=0)
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.sicache> reqInfo =0[ ../../../wulijiao/tvosbak/COSHIP_TVOS/component/CSDTV/service/dtv/si_cache/sic_paser.c:3490]
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.section> req sec:pid=10h,type=0,tid=(40h,ffh,0h), ver=(0h,0h,0h)
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate begin....
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERAllocate, nRet = 0
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.section> CSUDIFILTERStart, nRet = 0
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.sicache> SIC_Load_Table : hRequestSec = 0x16, sic_lokuptable[1].reqHandle = 0x16 
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter value:40 00 00 00 00 00 00 00 
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter mask:ff 00 00 00 00 00 00 00 
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.sicache> CSSIC::filter negate:00 00 00 00 00 00 00 00 
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.sicache> CSSIC::SIC_Load_Table(clientId-17,pid-0x10,timeout-10000) OK, loadId = 10
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.sicache> (SIC_LoadTable::1670) : SIC_loader_load end ( loadId = 10, error=0)
+07-20 19:26:27.772 D/MMCP    ( 1643): <dtv.sicache> [SIC_NoteLoadInfo]   g_sSicLoadId[1]:table_id:64,table_id_extension:65535,loadId:10  g_sSicLoadId[1].m_pCallback = 0x468ae1  
+07-20 19:26:27.866 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3243] event.type=0
+07-20 19:26:27.866 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3284] pid=0x10, tid=0x40, tid_ext=0x1, ver_num=6, sec_num=2, last_num=2, sic_lokuptable[0].cRepeatCount=0,cTableCount=0,cActualCount=0
+07-20 19:26:27.866 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3243] event.type=0
+07-20 19:26:27.866 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3284] pid=0x10, tid=0x40, tid_ext=0x1, ver_num=6, sec_num=2, last_num=2, sic_lokuptable[1].cRepeatCount=0,cTableCount=0,cActualCount=0
+07-20 19:26:00.735 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3243] event.type=0
+07-20 19:26:00.735 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3284] pid=0x10, tid=0x40, tid_ext=0x1, ver_num=6, sec_num=0, last_num=2, sic_lokuptable[0].cRepeatCount=0,cTableCount=1,cActualCount=0
+07-20 19:26:00.735 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3243] event.type=0
+07-20 19:26:00.736 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3284] pid=0x10, tid=0x40, tid_ext=0x1, ver_num=6, sec_num=0, last_num=2, sic_lokuptable[1].cRepeatCount=0,cTableCount=1,cActualCount=0
+07-20 19:26:03.598 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3243] event.type=2
+07-20 19:26:03.598 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3284] pid=0x10, tid=0x40, tid_ext=0x1, ver_num=6, sec_num=1, last_num=2, sic_lokuptable[0].cRepeatCount=0,cTableCount=1,cActualCount=0
+07-20 19:26:03.598 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3440]: send_event    type=34     m_dwLoadId=9 
+07-20 19:26:03.598 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
+07-20 19:26:03.598 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3454]: g_LoadMsg[0] Section2CSectionCancel(0x15)=1  loadID = 9
+07-20 19:26:03.598 D/MMCP    ( 1643): <dtv.sicache> SIC_Sections_Notify:g_LoadMsg[0].m_Event.code= 17 
+07-20 19:26:03.598 D/MMCP    ( 1643): <dtv.sicache> sic_loader_monitor-----while---------------------
+07-20 19:26:03.598 D/MMCP    ( 1643): <dtv.sicache> sic_loader_monitor:g_LoadMsg[0]
+07-20 19:26:03.598 D/MMCP    ( 1643): <dtv.sicache> SILoader:   data_receiver()
+07-20 19:26:03.598 D/MMCP    ( 1643): <dtv.sicache> [data_receiver]   g_sSicLoadId[i].m_ucIsMonitor = 0
+07-20 19:26:03.598 D/MMCP    ( 1643): <dtv.sicache> [sic_parseTable]----------after   wait      g_Table_user_count: 0-------------
+
+
+
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1803] netid=0x1   ver_num=6
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1870] end.
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1880]   g_ppsNetwork[0] = new_network
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1902]ts_start[-1283106732] = ts_end[-1283105817]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106732] = ts_end[-1283105817]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0001], onid : [0x0001]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106690] = ts_end[-1283105817]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0002], onid : [0x0001]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106642] = ts_end[-1283105817]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0003], onid : [0x0001]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106603] = ts_end[-1283105817]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0004], onid : [0x0001]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106564] = ts_end[-1283105817]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0005], onid : [0x0001]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106525] = ts_end[-1283105817]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0006], onid : [0x0001]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106486] = ts_end[-1283105817]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0007], onid : [0x0001]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106441] = ts_end[-1283105817]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0008], onid : [0x0001]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106399] = ts_end[-1283105817]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0009], onid : [0x0001]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106357] = ts_end[-1283105817]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x000a], onid : [0x0001]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106306] = ts_end[-1283105817]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x000b], onid : [0x0001]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106267] = ts_end[-1283105817]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x000c], onid : [0x0001]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106228] = ts_end[-1283105817]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x000d], onid : [0x0001]
+07-20 19:26:03.599 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106183] = ts_end[-1283105817]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x000e], onid : [0x0001]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106144] = ts_end[-1283105817]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x000f], onid : [0x0001]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106105] = ts_end[-1283105817]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0010], onid : [0x0001]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106063] = ts_end[-1283105817]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0011], onid : [0x0001]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283106024] = ts_end[-1283105817]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0012], onid : [0x0001]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283105997] = ts_end[-1283105817]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0013], onid : [0x0001]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283105973] = ts_end[-1283105817]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0014], onid : [0x0001]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283105934] = ts_end[-1283105817]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0015], onid : [0x0001]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283105850] = ts_end[-1283105817]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0016], onid : [0x0001]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1902]ts_start[-1283104756] = ts_end[-1283103750]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104756] = ts_end[-1283103750]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0017], onid : [0x0001]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104714] = ts_end[-1283103750]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0018], onid : [0x0001]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104669] = ts_end[-1283103750]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0019], onid : [0x0001]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104624] = ts_end[-1283103750]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x001a], onid : [0x0001]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104594] = ts_end[-1283103750]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x001b], onid : [0x0001]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104561] = ts_end[-1283103750]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x001d], onid : [0x0001]
+07-20 19:26:03.600 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104528] = ts_end[-1283103750]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x001f], onid : [0x0001]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104483] = ts_end[-1283103750]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0020], onid : [0x0001]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104453] = ts_end[-1283103750]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0023], onid : [0x0001]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104414] = ts_end[-1283103750]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x01f4], onid : [0x0001]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104395] = ts_end[-1283103750]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0021], onid : [0x0001]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104365] = ts_end[-1283103750]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0022], onid : [0x0001]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104338] = ts_end[-1283103750]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0025], onid : [0x0001]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104311] = ts_end[-1283103750]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0024], onid : [0x0001]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104278] = ts_end[-1283103750]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0026], onid : [0x0001]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104245] = ts_end[-1283103750]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0027], onid : [0x0001]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104212] = ts_end[-1283103750]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0028], onid : [0x0001]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104179] = ts_end[-1283103750]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x002b], onid : [0x0001]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104146] = ts_end[-1283103750]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x002c], onid : [0x0001]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104113] = ts_end[-1283103750]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0029], onid : [0x0001]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104080] = ts_end[-1283103750]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x002d], onid : [0x0001]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104047] = ts_end[-1283103750]
+07-20 19:26:03.601 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x001c], onid : [0x0001]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283104008] = ts_end[-1283103750]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x001e], onid : [0x0001]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283103978] = ts_end[-1283103750]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x002e], onid : [0x0001]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283103945] = ts_end[-1283103750]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x002f], onid : [0x0001]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283103912] = ts_end[-1283103750]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0030], onid : [0x0001]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283103893] = ts_end[-1283103750]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x00de], onid : [0x0001]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283103872] = ts_end[-1283103750]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0031], onid : [0x0001]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283103830] = ts_end[-1283103750]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0032], onid : [0x0001]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283103800] = ts_end[-1283103750]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0033], onid : [0x0001]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283103770] = ts_end[-1283103750]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1968]   Transport Streams  > tid : [0x0034], onid : [0x0001]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1902]ts_start[-1283046916] = ts_end[-1283046897]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1908]ts_start[-1283046916] = ts_end[-1283046897]
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> Network: > find 1 descriptors belong to existed ts TsId=0x34,OrgNetId=0x1
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[3] == 0
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[4] == 0
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[5] == 0
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[6] == 0
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[7] == 0
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[8] == 0
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[9] == 0
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[10] == 0
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[11] == 0
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[12] == 0
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[13] == 0
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[14] == 0
+07-20 19:26:03.602 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[15] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[16] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[17] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[18] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[19] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[20] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[21] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[22] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[23] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[24] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[25] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[26] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[27] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[28] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[29] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[30] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[31] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[32] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[33] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[34] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[35] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[36] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[37] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[38] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[39] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[40] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[41] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[42] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[43] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[44] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[45] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[46] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[47] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[48] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[49] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[50] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[51] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[52] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[53] == 0
+07-20 19:26:03.603 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[54] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[55] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[56] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[57] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[58] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify::3243] event.type=2
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[59] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[60] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[61] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[62] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[63] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[64] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[65] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[66] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[67] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[68] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[69] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[70] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[71] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[72] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[73] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[74] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[75] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[76] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[77] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[78] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[79] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[80] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[81] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[82] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[83] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[84] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[85] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[86] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[87] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[88] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[89] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[90] == 0
+07-20 19:26:03.604 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[91] == 0
+07-20 19:26:03.605 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[92] == 0
+07-20 19:26:03.605 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[93] == 0
+07-20 19:26:03.605 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[94] == 0
+07-20 19:26:03.605 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[95] == 0
+07-20 19:26:03.605 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[96] == 0
+07-20 19:26:03.605 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[97] == 0
+07-20 19:26:03.605 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[98] == 0
+07-20 19:26:03.605 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[99] == 0
+07-20 19:26:03.605 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[100] == 0
+07-20 19:26:03.605 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[101] == 0
+07-20 19:26:03.605 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[102] == 0
+07-20 19:26:03.605 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[103] == 0
+07-20 19:26:03.605 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[104] == 0
+07-20 19:26:03.605 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[105] == 0
+07-20 19:26:03.605 D/MMCP    ( 1643): <dtv.sicache> [sic_parseNIT::1838]:data->m_dwDataAddrs[106] == 0
+
