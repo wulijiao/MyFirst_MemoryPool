@@ -124,6 +124,7 @@
 07-20 19:26:21.125 D/MMCP    ( 1643): <dtv.section> [Cancel] CSUDIFILTERFree filter , nRet = 0
 07-20 19:26:21.125 D/MMCP    ( 1643): <dtv.sicache> [SIC_Sections_Notify:3454]: g_LoadMsg[0] Section2CSectionCancel(0x2)=1  loadID = 2
 07-20 19:26:21.125 D/MMCP    ( 1643): <dtv.sicache> SIC_Sections_Notify:g_LoadMsg[0].m_Event.code= 17 
+
 07-20 19:26:21.125 D/MMCP    ( 1643): <dtv.si> [USP_SI] (SIPATHelper::PostEvent) PAT Callback come: 2 (0.avail, 1.timeout, 2.completed, 3.repeleated, 4.versionchanged)
 07-20 19:26:21.125 D/MMCP    ( 1643): <dtv.si> [USP_SI] (SIPATHelper::PostEvent) wServiceID=0 ,wTSID=13,wPMTPID=16!
 07-20 19:26:21.125 D/MMCP    ( 1643): <dtv.si> [USP_SI] (SIPATHelper::PostEvent) wServiceID=646 ,wTSID=13,wPMTPID=4400!

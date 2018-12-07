@@ -12,8 +12,12 @@ java阶段性学习 --- 视频 --- 每期学习时间计划 ：https://blog.csdn.net/qq_28764165
 Android硬件抽象层（HAL）概要介绍和学习计划：https://blog.csdn.net/luoshengyang/article/details/6567257
 
 安卓学习：
-binder机制：https://blog.csdn.net/luoshengyang/article/details/6618363
-
+IPC 通信机制 -- binder机制：https://blog.csdn.net/luoshengyang/article/details/6618363
+基础了解 -- 设计与实现
+https://blog.csdn.net/luoshengyang/article/details/6618363
+https://blog.csdn.net/freshui/article/details/54926111
 
 初解：
 程序的启动过程： main参数的传递 --》 init --- _start  --- http://www.bkjia.com/Androidjc/1031273.html
+安卓andlinux：
+2.2.x Froyo        |8          |2.6.32

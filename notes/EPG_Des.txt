@@ -1,58 +1,70 @@
 ----------------------------EPG:
-数据流程：
+数据获取流程：
 NIT表→SDT表→EIT表→生成EPG
 NIT：
 频率、符号率、调制方式
+节目搜索过程：
+CAT ---> BAT ---> PMT/PAT ---> NIT/SDT ---> 
 
---------------------------解扰
-SDT表业务标识符service_id（它等于program_number）→PAT表→PMT表→找到所需节目的TS包→CAT表→解扰→解码
+节目搜索流程：
+------》void SearchThread( PVOID pParam )----》 Searching::SearchEx ---》pBaseSearch->StartSearchEx---》BaseSearch::StartSearchEx/ UniSearch::Start ---》UniSearch::SearchTransponder --》 StartOneNITPrivateSearch/StartOneDeliverSearch/GetNextDeliverHandle----》AddCommonDeliver --->  
 
-DTV -> 通知CA，触发事件 -> CA  
-DTVInit（CSCreateCA，CSCATCallback-表注册函数）-》
+		搜索过程：int CSSICInit(void) --》sic_loader_monitor(void *data)  ---》data_receiver（）---》NGBCableSearch::StartSearch（）--》CSShellSearchCreateUI（）--》CreatePATPMTSearchUI（）--》InsertSearchHandle（）--》InsertSearchHandle（）
+		dtv.sicache表数据请求：CSSICLoadTable（）---》CSSICLoadTableByFreq（）--》SIC_LoadTable()/SIC_LoadExternTable()
+		dtv.sicache表数据的监测：CSSICMonitorTable（）--》SIC_LoadTable（）--》SIC_loader_load（）---》SIC_Load_Table（）--》Section2CSectionRequest(&reqInfo, SIC_Sections_Notify);
+		Section:请求表数据Demux-SIC_LoadTable()--->Section2CSectionRequest()-->............................SectionWorker.RequestSection() 
+
+component/CSDTV/service/dtv/Search/Src/Searching.cpp:636:            CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH %s %d]search action %d start!\n", __FUNCTION__, __LINE__, eSearchAction);
+component/CSDTV/service/dtv/Search/Src/Searching.cpp:704:            CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH %s %d]search action %d end!\n", __FUNCTION__, __LINE__, eSearchAction);
+
+dtv/Search/Src/BaseSearch.cpp:714:	CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_Search] StartSearchEx sourceType = %d\r\n", m_nSourceType);
+
+dtv/Search/Src/PATPMTSearch.cpp:746:		CSDebug(DBG_DTV_SEARCH, ERROR_LEVEL, "[USP-Search] RequetSource Result: 0x%x\r\n", bRe
+
+		dtv/si_cache/cssi_cache.c:2282:    CSDEBUG( DBG_DTV_SICACHE ,DEBUG_LEVEL,"SILoader: To CSSICLoadTable() 
+		dtv/si_cache/cssi_cache.c:2218:    CSDEBUG( DBG_DTV_SICACHE ,DEBUG_LEVEL,"SILoader: To CSSICLoadTableByFreq() :\n");
+		dtv/si_cache/cssi_cache.c:
 
 
-解扰开启流程：
-MediaPlayer-》MediaPlayerService-》DVBPlayer（DCASAL_notifyFreqChange-》）-》Novel-Supertv(Client)（BpCATNoticeFilterServer）-》Novel-Supertv(CAT-server)（TRANSACTION_notifyFreqChange）-》DVBPlayer（start ca startDescrambling）-》DTVALManager（DTVAL_caStartDescrambling-CSNotifyStartCA）-》CSUDIOSMsgQueueSend（）CaApp/CS_IRDETOCA_UserInterface.c-》CAT-server（CatTimerFun）-》CAT-server（StartFilter）
-startDescrambling（DVBPlayer） --- CSNotifyStartCA 
-解扰运行流程：
-task（ParseServiceStatusMsg注册出去）-》get(softcell service and demux index or group handle)-》CA_SVCINFO_ParseDescrambleServiceInfo-》
+dtv/Search/Src/BaseSearch.cpp:321:		CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH]SOURCE_CONNECTED\n");
 
-重点解析--CA_SVCINFO_ParseDescrambleServiceInfo（）：
-CA_LOCAL_GROUP_SERVICE_INFO：EMM、ECM数据(录制与回放有不同的定义)、进行解扰信息的获取、
+	component/CSDTV/service/dtv/Search/Src/PATPMTSearch.cpp:131:		CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH] Wait for tunner result--StartOneDeliverSearch:0x%x!\n", nRe);
+	component/CSDTV/service/dtv/Search/Src/UniSearch.cpp:155:			CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH] Wait for tunner result--StartOneDeliverSearch:0x%x!\n", nRe);
+	component/CSDTV/service/dtv/Search/Src/UniSearch.cpp:2835:			CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH] Wait for tunner result--StartOneDeliverSearch:0x%x!\n", nRe);
+
+component/CSDTV/service/dtv/Search/Src/BaseSearch.cpp:406:				CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH]SINotify COMPLETE\n");
+component/CSDTV/service/dtv/Search/Src/BaseSearch.cpp:410:				CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH]SINotify COMPLETE ok\n");
+
+	component/CSDTV/service/dtv/Search/Src/PATPMTSearch.cpp:248:			CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH] Wait for SI result--StartOneDeliverSearch:0x%x!\n", nRe);
+	component/CSDTV/service/dtv/Search/Src/UniSearch.cpp:249:				CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH] Wait for SI result--StartOneDeliverSearch:0x%x!\n", nRe);
+
+component/CSDTV/service/dtv/Search/Src/DataService.cpp:155:	CSDebug(DBG_DTV_SEARCH, ERROR_LEVEL, "AddCommonDeliver -- hDataTransponder = 0x%x, hDataContainer = 0x%x,fre=%d\r\n", hDataTransponder, hDataContainer,
+component/CSDTV/service/dtv/Search/Src/DataService.cpp:159:	CSDebug(DBG_DTV_SEARCH, ERROR_LEVEL, "AddCommonDeliver -- tempSourceID:[0x%x,0x%x] %x\r\n", tempSourceID.m_wOriginal_network_id, tempSourceID.m_wTSID, nRet);
+component/CSDTV/service/dtv/Search/Src/DataService.cpp:175:	CSDebug(DBG_DTV_SEARCH, ERROR_LEVEL, "AddCommonDeliver -- nRet = 0x%x, hDataTransponder = 0x%x, hDataContainer = 0x%x, hData = 0x%x\r\n", nRet, hDataTransponder, hDataContainer,hData);
+component/CSDTV/service/dtv/Search/Src/DataService.cpp:179:	CSDebug(DBG_DTV_SEARCH, ERROR_LEVEL, "AddCommonDeliver -- stSourceID.tsid = 0x%x\r\n", stSourceID.m_wTSID);
+
+	dtv/Search/Src/UniSearch.cpp:444:   CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH] PATPMT: index = %d hTransd 
+	dtv/Search/Src/PATPMTSearch.cpp:402:	CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH] PATPMT: index = %d hTransd = 0x%x sdtVersion = 0x%x\r\n",
 
 
 
 
-CA初始化--CS_CA_Init：如下
-2.CA服务的开启--CS_IRDTOCA_Init：
-  信号量初始化；
-  版本信息获取；
-  信息空间的初始化；
-  任务队列初始化；
-  高安（SWC）的CA设置；
-  OTA初始化；
-  NVM初始化；
-  TXT初始化；
-  智能卡驱动初始化；
-  demux驱动初始化；
-  三方CA服务初始化；
-  Command初始化；
-  UI初始化；
-  
-  
-  
-
-CA线程服务启动：已开启则直接使用，未启动则重新启动（在初始化时，已创建）
-操作事项：服务句柄的绑定
-
-CAT数据：数据更新
-
-PMT数据：数据更新
-
-CA线程服务停止：释放句柄、释放demux、CA_TASK_SendMessage-请求停止task（客户端发出停止caapp-》服务停止catask）、softcell资源的是否
+CSUSPServiceManager----》
+BOOL CSUSPServiceManager::Start( void )
+{
+	CSUDIOSThreadCreate(strThreadName,m_nMainPriority,m_nMainStackSize,RunServiceManager,this,&hThread);
+}
+void CSUSPServiceManager::Run( void )
+void CSUSPServiceManager::T_START_PLAY（）
+rtg_init7();		//启动锁频
+BOOL AgentSource::RequestSource( HCSHANDLE hSource, BOOL bImmediatelyUse )
+m_sourceHelper.ConnectSource(m_hTransponder,m_hDataContainer);
+pAgentSource->SourceNotify((HCSHANDLE)this, WAITTINGSOURCE, 0, 0);
+m_pCallback( SIGNAL_CONNECTED, NULL );
 
 
 问题：
-在手动搜索的时候，调制方式是固定的，这个对所有的节目都适用吗？
-谁对表数据信息进行了解析？
+在手动搜索的时候，调制方式是固定的？
+--- 盲扫与自动搜索是一致的，参数是已经设置好的
+谁对表数据信息进行了解析？ ----  有专门的SECTION模块
 

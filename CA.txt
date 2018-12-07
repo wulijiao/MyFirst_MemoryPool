@@ -6,8 +6,7 @@
 readelf  -d out/target/product/Hi3798MV200/system/bin/DTVServer
 arm-hisiv200-linux-addr2line -e out/target/product/Hi3798MV200/symbols/system/lib/libngbj_jni.so -f 00017425 -C
 
-cd tvos/TVOS_STA_3.0.01.0/
-
+---------->TVOS_STA_3.0.01.0   ---- lunch 选择：eng、user、userdebug
 source platform/android/build/envsetup.sh
 lunch Hi3798MV200-eng
 
@@ -17,6 +16,34 @@ export SME_DEPS_BIN_PATH=$HOME/sme_tool/usr/bin
 export PERLLIB=~/sme_tool/usr/lib/perl/:$PERLLIB
 export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
 export PATH=$JAVA_HOME:$PATH
+
+------------->TVOS_STA_3.1.00.1
+source platform/android/build/envsetup.sh
+lunch Hi3798MV200H-eng
+export PATH=$HOME/sme_tool/usr/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/sme_tool/usr/lib:$LD_LIBRARY_PATH
+export SME_DEPS_BIN_PATH=$HOME/sme_tool/usr/bin
+export PERLLIB=~/sme_tool/usr/lib/perl/:$PERLLIB
+export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
+export PATH=$JAVA_HOME:$PATH
+
+mmm /sdb/wulijiao/tvosbak/COSHIP_TVOS/component/CA/ -B
+
+
+declare -x ANDROID_JAVA_TOOLCHAIN="/opt/java/jdk1.8.0_151/bin"
+declare -x ANDROID_PRE_BUILD_PATHS="/opt/java/jdk1.8.0_151/bin:"
+declare -x JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
+declare -x PATH="/usr/lib/jvm/java-7-openjdk-amd64:/usr/lib/jvm/java-7-openjdk-amd64:/opt/java/jdk1.8.0_151/bin:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/device/hisilicon/bigfish/HiSTBSDKV6R2/tools/linux/toolchains/arm-histbv320-linux/bin/:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/out/host/linux-x86/bin:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8/bin:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/gcc/linux-x86/:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/development/scripts:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/devtools/tools:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/android-emulator/linux-x86_64:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/device/hisilicon/bigfish/prebuilts/toolchains/arm-histb-linux/bin:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/out/host/linux-x86/bin:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8/bin:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/gcc/linux-x86/:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/development/scripts:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/devtools/tools:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/android-emulator/linux-x86_64:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+
+
+export BOOT_REG_NAME :=hi3798mv2dmg_hi3798mv200_DDR4-2133_2GB_16bitx2_2layers.reg
+export BOOT_REG1_NAME :=
+export BOOT_REG2_NAME :=
+export BOOT_REG3_NAME :=
+export BOOT_REG4_NAME :=
+export BOOT_REG5_NAME :=
+
+
 
 备份：
 mmm /sdb/wulijiao/tvosbak/COSHIP_TVOS/component/CA/ -B
@@ -31,16 +58,7 @@ mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CA/ -B
 mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CSDTV/ -B
 
 cp ./out/target/product/Hi3798MV200/system/bin/DTVServer /sdb/wulijiao/
-cp ./out/target/product/Hi3798MV200/obj/lib/libCSDTVClient.so /sdb/wulijiao/
-
-cp ./out/target/product/Hi3798MV200/system/bin/DTVServer /sdb/wulijiao/
-cp ./out/target/product/Hi3798MV200/system/lib/libCSDTVClient.so /sdb/wulijiao/
-cp ./out/target/product/Hi3798MV200/system/lib/libsm_irdeto.so /sdb/wulijiao/
-cp ./out/target/product/Hi3798MV200/system/lib/libCAALService.so /sdb/wulijiao/
-cp ./out/target/product/Hi3798MV200/system/lib/libtf.so /sdb/wulijiao/
-cp ./out/target/product/Hi3798MV200/obj/lib/libirdto3.so /sdb/wulijiao
-cp ./out/target/product/Hi3798MV200/system/lib/libshuma.so /sdb/wulijiao
-
+cp ./out/target/product/Hi3798MV200/system/lib/libirdto3.so /sdb/wulijiao/
 
 
 
@@ -56,8 +74,12 @@ logcat -c;logcat -G 20M;logcat -v time | grep -E "shuma_caporting|ca_shuma_irdto
 获取信息：
 logcat -c;logcat -G 10M;logcat -v time | grep -E "Ca_Shuma_tvos|shuma_caporting|CAManager_native|DVTSTBCA_UrgencyBroadcast|DVTSTBCA_ShowOSDMsg"
 logcat -c;logcat -G 10M;logcat -v time | grep -E "CAManager_native|CAViewedIPP_native|CACard_native|CAIPP_native|CAALManager|TV_JNI|shuma_caporting|DTVALManager|CS_CA|Ca_Shuma_tvos|ca_shuma_irdto_tvos|OTTDVB"
-界面提示：logcat -c;logcat -G 10M;logcat -v time | grep -E "dtv.search"
 
+CA数据流程：logcat -c;logcat -G 10M;logcat -v time |grep -E "dtv.search|dtv.si|dtv.section|dtv.sicache|IrdetoSmc|IrdetoVDSC|IrdetoAppDepend|IrdetoCaCommand|IrdetoSmc|IrdetoVDDF|IrdetoDmx|IrdetoInterface|csca_irdto3_tvos|SoftDemux|IrdetoAlarmMsg|IrdetoOS|IrdetoUSPDependence|IrdetoBISS|IrdetoMsg|IrdetoNvm|IrdetoProg|IrdetoPvr|IrdetoSrvMgr|IrdetoSol|IrdetoUiReply|NGB_DB" > /data/CADTV.txt 
+
+logcat -c;logcat -G 10M;logcat -v time | grep -E "IrdetoSmc|IrdetoDmx|IrdetoRsa|IrdetoUSPDependence|IrdetoVDDD|IrdetoProg|IrdetoOta"
+logcat -c;logcat -G 10M;logcat -v time | grep -E "IrdetoSmc|IrdetoDmx|IrdetoRsa|dtv.sicache|IrdetoUSPDependence|NGB_DB"
+logcat -c;logcat -G 10M;logcat -v time | grep -E "IrdetoRsa|cs_cssecure"
 乱码：
 java -encoding gdk /sdb/wulijiao/tvos/COSHIP_TVOS/framework/ngb-j/java/impl/ngb/ca/CAManagerImp.java
 解析动态库：
@@ -134,9 +156,7 @@ MMCP_debug.h 中对中间层的调试信息进行了定义
 在shell_config.c中有定义
 
 
-
-
-扩展：
+---------------------------------扩展：
 控件、插件、组件
 本质上都是功能模块，都是做好的，组件是底层用的，控件是与视图展示有关的，可以改里面的除了视图以外的东西，插件是采用通用接口编写的，多用于制作好的东西功能扩展。
 	if(event instanceof CAOsdEvent){
@@ -191,14 +211,6 @@ CSUDISMCDataExchange(int nCardIndex, unsigned char  *pucWriteData,int nNumberToW
 DVTSTBCA_SCAPDU（这个接口的功能不是很理解）---SmcGetStatus(g_eSmcPortConfig.nPort, &eSmcStatus)!= E_SMC_IN--->SMCA_DisposeMsgToFta(CA_ALARM, CA_ALARM_SMC_OUT, (DWORD)CS_CS_GetCryptType()加扰类型的获取)---CSSMCDataExchange/设备与智能卡之间进行数据交换-检测卡（获取卡的状态信息）
 
 CA具有很多信息通知接口:新的表信息，CA服务的开启等
-
-FillUserEPG//用户发出节目列表请求-EPG流程：
-
-节目搜索流程与EPG流程之间的区别？
-
-
-
-
 //________________________________________________________________________________________end
 
 
@@ -264,50 +276,62 @@ libandroid_runtime.so  libhi_sample_common.so  libnativehelper
 
 //_________________________________________________________________________________________end
 
-换卡需要换台的代码修改：
-cainject 
-startCA
-
-
-	/*若两次的卡类型不一样，就进行CAstart操作,避免换卡之后，需要切台才可以继续播放*/
-	//begin
-	if (s_nSmcType != nType)
-	{
-		s_nSmcType = nType;
-		if (CSNotifyChangeCardStartCA() == -1)
-		{
-			LOGD(" CSChangeCardStartCA failed !\n");
-		}
-		LOGD(" --->CSChangeCardStartCA !\n");
-	}
-	
-	//end author:wulijiao
+数据改变的通知是用谁来做的 
+ ---  DTV_SI_CAche通知CA模块：CS_SMCA_NewCatSectionNotify/CS_CA_NotifyNewPmt --- CS_CA_NewCatSectionNotify
+初始化 --- DTV创建CA --- CaInjectTaskMain（start/stop）
+iLocalRequestPAT -- iPATCallBack -- iPmtCallback --- CSSICLoadTable --- CSSICLoadTableByFreq --- SIC_LoadTable ---
+iLocalRequestCAT --- iCATCallBack --- 
+CaTaskMainDealCAT 
+CaParseCAT --- DVTCASTB_CASIDVerify 调用第三方库，检查CASID是否正确  ---- wEmmPid
+DVTCASTB_SetEmmPid --- CAS模块将根据设置的EMMPID信息进行EMM数据接收处理 --- 
+CaTaskMainDealPMT
+CaParseCADescriptors --- Set Ecm PID  ---  CaNotifyCakEcmChange --- CS_DVTCA_StopAllOldEcm --- CS_DVTCA_StartGettingECM --- CS_CA_SetCurrentServiceParam(若为非加扰节目，将ECMPID=0) 
+DVTSTBCA_SetDescrCW  
+DVTSTBCA_SCAPDU  --- CSSMCDataExchange
+CS_CA_StopEcmSection（card out）--- StopAllSectionFilter
 
 
 
-SMC_TYPE_E CSCAGetLastSmcType(void)
-{	
-	//LOGD(" CSCAGetSmcType g_nSmcType=%d\n", g_nSmcType);
-	return LastSMCType;
-}
+--------------------------解扰
+SDT表业务标识符service_id（它等于program_number）→PAT表→PMT表→找到所需节目的TS包→CAT表→解扰→解码
+
+DTV -> 通知CA，触发事件 -> CA  
+DTVInit（CSCreateCA，CSCATCallback-表注册函数）-》
 
 
-/*
-增加接口目的：解决换卡后，需要切台才可以继续收看节目问题
-*/
-//begin
-int CSNotifyChangeCardStartCA(void)
-{
-	T_CAINJECT_QueueMsg  Msg;
-	memset(&Msg, 0, sizeof(Msg));
-	Msg.m_dw1st= NOTICE_START_CA;
-	Msg.m_dw2nd = &s_caInject;
-	if(CSUDIOSMsgQueueSend(g_unQueMainId,(const void *)&Msg,16, 0) != CSUDI_SUCCESS)
-	{
-		LOGD(  "[%s][%s][%d]Send NOTICE_START_CA error !\r\n", __FILE__, __FUNCTION__, __LINE__);
-		return FAILURE;
-	}
-	return 0;
-}
-//end
-//author:wulijiao
+解扰开启流程：
+MediaPlayer-》MediaPlayerService-》DVBPlayer（DCASAL_notifyFreqChange-》）-》Novel-Supertv(Client)（BpCATNoticeFilterServer）-》Novel-Supertv(CAT-server)（TRANSACTION_notifyFreqChange）-》DVBPlayer（start ca startDescrambling）-》DTVALManager（DTVAL_caStartDescrambling-CSNotifyStartCA）-》CSUDIOSMsgQueueSend（）CaApp/CS_IRDETOCA_UserInterface.c-》CAT-server（CatTimerFun）-》CAT-server（StartFilter）
+startDescrambling（DVBPlayer） --- CSNotifyStartCA 
+解扰运行流程：
+task（ParseServiceStatusMsg注册出去）-》get(softcell service and demux index or group handle)-》CA_SVCINFO_ParseDescrambleServiceInfo-》
+
+重点解析--CA_SVCINFO_ParseDescrambleServiceInfo（）：
+CA_LOCAL_GROUP_SERVICE_INFO：EMM、ECM数据(录制与回放有不同的定义)、进行解扰信息的获取、
+
+
+CA初始化--CS_CA_Init：如下
+2.CA服务的开启--CS_IRDTOCA_Init：
+  信号量初始化；
+  版本信息获取；
+  信息空间的初始化；
+  任务队列初始化；
+  高安（SWC）的CA设置；
+  OTA初始化；
+  NVM初始化；
+  TXT初始化；
+  智能卡驱动初始化；
+  demux驱动初始化；
+  三方CA服务初始化；
+  Command初始化；
+  UI初始化；  
+  
+
+CA线程服务启动：已开启则直接使用，未启动则重新启动（在初始化时，已创建）
+操作事项：服务句柄的绑定
+CAT数据：数据更新
+PMT数据：数据更新
+CA线程服务停止：释放句柄、释放demux、CA_TASK_SendMessage-请求停止task（客户端发出停止caapp-》服务停止catask）、softcell资源的是否
+CA创建：		main（）；CSDTVALManagerServiceInit（）；DTVInit（）；DTVInit（）；CSRegisterMMCPExternalCB();CSCreateCA();CaInjectTaskMain（CSStopCA、iLocalRequestPAT、iLocalRequestCAT、CSStartCA）；iStartCAWithTable（）；
+
+解扰数据交换：New ECM
+g_dwChipId(Publicid)/CSCASCWLoadCWPK（）; CSSMCDataExchange（）；分配一个解扰的通道ID-->CSDSMAllocateDescrambleEX(HCSHANDLE hHandle ,DWORD *pdwDescrambleID); PIDCSDSMSetDescramblePID(DWORD dwDescrambleID,WORD wPID )-->为解扰的通道ID指定过滤的;CS_CA_ProcessCW（非高级安全芯片-》CSCADealNAChipsetNASecureCW-非高级安全芯片-》CSCADealChipsetNASecureCW）；DMUX_DRV_SetDescramblerEvenKey（dwDescrambleID, abOutKey, bTempLength, 1）；CS_CA_DSMSetEvenKeyValue（）；CSDSMDescrambleSetEvenKeyValue（设置解扰通道的偶Key值）；
