@@ -1,5 +1,0 @@
-博客-安卓-DVB-视频：https://blog.csdn.net/datamining2005/article/details/53946059
-非常全面-Java-Linux：https://blog.csdn.net/luoshengyang/article/details/8923485
-EPG详解：https://blog.csdn.net/datamining2005/article/details/54310996
-
-Android硬件抽象层（HAL）概要介绍和学习计划：https://blog.csdn.net/luoshengyang/article/details/6567257

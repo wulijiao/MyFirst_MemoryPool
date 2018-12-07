@@ -1,3 +1,0 @@
-文件查看指令：
-可读文件：cat、more或者less
-可读性较差的文件：apm、free、lspci或top

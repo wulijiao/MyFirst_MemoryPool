@@ -1,0 +1,308 @@
+1. 初始化所做的事情
+2. 消息是如何抛到java层，或者是说消息在各层之间的传递
+3. 调试信息的开启
+
+
+readelf  -d out/target/product/Hi3798MV200/system/bin/DTVServer
+arm-hisiv200-linux-addr2line -e out/target/product/Hi3798MV200/symbols/system/lib/libngbj_jni.so -f 00017425 -C
+
+cd tvos/TVOS_STA_3.0.01.0/
+
+source platform/android/build/envsetup.sh
+lunch Hi3798MV200-eng
+
+export PATH=$HOME/sme_tool/usr/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/sme_tool/usr/lib:$LD_LIBRARY_PATH
+export SME_DEPS_BIN_PATH=$HOME/sme_tool/usr/bin
+export PERLLIB=~/sme_tool/usr/lib/perl/:$PERLLIB
+export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
+export PATH=$JAVA_HOME:$PATH
+
+备份：
+mmm /sdb/wulijiao/tvosbak/COSHIP_TVOS/component/CA/ -B
+mmm /sdb/wulijiao/tvosbak/COSHIP_TVOS/component/CSDTV/ -B
+
+
+
+mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CSDTV/service/dtv/DataManager/ -B
+mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CSDTV/service/dtv/Source/ -B
+mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CSDTV/service/dtv/Section/ -B
+mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CA/ -B
+mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CSDTV/ -B
+
+cp ./out/target/product/Hi3798MV200/system/bin/DTVServer /sdb/wulijiao/
+cp ./out/target/product/Hi3798MV200/obj/lib/libCSDTVClient.so /sdb/wulijiao/
+
+cp ./out/target/product/Hi3798MV200/system/bin/DTVServer /sdb/wulijiao/
+cp ./out/target/product/Hi3798MV200/system/lib/libCSDTVClient.so /sdb/wulijiao/
+cp ./out/target/product/Hi3798MV200/system/lib/libsm_irdeto.so /sdb/wulijiao/
+cp ./out/target/product/Hi3798MV200/system/lib/libCAALService.so /sdb/wulijiao/
+cp ./out/target/product/Hi3798MV200/system/lib/libtf.so /sdb/wulijiao/
+cp ./out/target/product/Hi3798MV200/obj/lib/libirdto3.so /sdb/wulijiao
+cp ./out/target/product/Hi3798MV200/system/lib/libshuma.so /sdb/wulijiao
+
+
+
+
+logcat -c;logcat -G 10M;logcat -v time | grep -E "Ca_Shuma_tvos|CAManager_native|DVTSTBCA_UrgencyBroadcast|DVTSTBCA_ShowOSDMsg|OTTDVB|CAALManager|CAManager_native|CAMail_native|ca_shuma_irdto_tvos|Ca_Shuma_tvos"
+
+
+邮件:logcat -c;logcat -G 10M;logcat -v time | grep -E "IrdetoAppDepend|ca_shuma_irdto_tvos|IrdetoOS|IrdetoMail"
+抓取应急广播：
+OSD:    logcat -c;logcat -G 10M;logcat -v time | grep -E "OTTDVB||ca_shuma_irdto_tvos|DVTCA_UINF|shuma_caporting|DVTSTBCA_UrgencyBroadcast|Ca_Shuma_tvos|CAManager_native|DVTSTBCA_ShowOSDMsg"
+NO_OSD: logcat -c;logcat -G 10M;logcat -v time | grep -E "shuma_caporting|CAALManager|ca_shuma_irdto_tvos|CAManager_native|DVTSTBCA_UrgencyBroadcast|Ca_Shuma_tvos|DVTCA_UINF|CA_COMMON"
+logcat -c;logcat -G 20M;logcat -v time | grep -E "shuma_caporting|ca_shuma_irdto_tvos|CAALManager|CAManager_native|OTTDVB|Ca_Shuma_tvos|DVTCA_UINF|CA_COMMON|UDI_DMX"
+
+获取信息：
+logcat -c;logcat -G 10M;logcat -v time | grep -E "Ca_Shuma_tvos|shuma_caporting|CAManager_native|DVTSTBCA_UrgencyBroadcast|DVTSTBCA_ShowOSDMsg"
+logcat -c;logcat -G 10M;logcat -v time | grep -E "CAManager_native|CAViewedIPP_native|CACard_native|CAIPP_native|CAALManager|TV_JNI|shuma_caporting|DTVALManager|CS_CA|Ca_Shuma_tvos|ca_shuma_irdto_tvos|OTTDVB"
+界面提示：logcat -c;logcat -G 10M;logcat -v time | grep -E "chdrv_av.c"
+
+乱码：
+java -encoding gdk /sdb/wulijiao/tvos/COSHIP_TVOS/framework/ngb-j/java/impl/ngb/ca/CAManagerImp.java
+解析动态库：
+strings -f ./out/target/product/Hi3798MV200/system/lib/*.so |grep "pstMsg*****************begin"
+清除缓存：
+ busybox free -m
+ busybox sysctl -w vm.drop_caches=3
+ rm data/
+
+查看堆栈信息：
+arm-histbv310-linux-addr2line  -e out/target/product/Hi3798MV200/symbols/system/lib/libsm_irdeto.so -f 0004b720 -C
+arm-histbv310-linux-addr2line  -Ce out/target/product/Hi3798MV200/symbols/system/lib/libngbj_jni.so -f 00014637
+
+跨越权限进行文件的拷贝：
+scp -r wulijiao@10.10.117.232:/sdb/wulijiao/libporting.so ./
+
+截获码流信息：
+echo help > demux_main 
+echo save dmxts stop > /proc/msp/demux_main
+echo /data  > /proc/msp/log   
+echo help > /proc/msp/
+
+代码提交：
+rm component/CA/common/include/cs_cainterface.h
+git checkout component/CA/common/include/cs_cainterface.h
+git pull
+git status
+git add 
+git commit -m 
+git push origin HAND:refs/for/master
+注意钩子文件的下载，才可以留下记录
+
+
+权限：
+chmod 777 ~/tvos/COSHIP_TVOS/framework/ngb-j/ -rf
+
+清除缓存机顶盒数据缓存:
+rm /data/db/*.bin
+rm /data/db/config/PMT*
+rm /data/data/com.coship.providers.dvb/databases/*
+堆栈数据位置：
+/data/tomstonbes
+
+属性设置：
+android 设置属性的C接口 property_set
+
+初始化：
+CA卡信息IO口的初始化
+设置CA卡IRD端口
+设置CA卡SM端口
+
+插件-同方-初始化
+管理服务初始化
+-实例化一个服务器管理类对象（与客户端的连接、时间处理的回调函数）
+binder的开启
+CA卡初始化
+同方
+
+-------------------------------备注
+调试信息的打开:
+#define LOG_TAG "CS_DTV"
+udi/include/udiplus_debug.h: #define LOGD(fmt, args...) CSDebug(LOG_TAG, DEBUG_LEVEL, fmt, ##args)
+应用调试打印模式设置：
+void CS_CA_SetDebugMode(T_CaTraceFlow dwMode);
+打印级别设置：
+udiplus_debug.h 中进行了定义
+MMCP_debug.h 中对中间层的调试信息进行了定义
+配置文件信息的获取（shell）：
+在shell_config.c中有定义
+
+
+
+
+扩展：
+控件、插件、组件
+本质上都是功能模块，都是做好的，组件是底层用的，控件是与视图展示有关的，可以改里面的除了视图以外的东西，插件是采用通用接口编写的，多用于制作好的东西功能扩展。
+	if(event instanceof CAOsdEvent){
+			CAOsdEvent osdEvent = (CAOsdEvent)event;
+			Log.d(TAG, "Message--------------------"+event.getMessage());
+		}
+**将字符串的指针--直接给了一个函数指针
+
+---------------------------------问题：
+S3VD是什么意思?
+问题：IREDTO_SMC.C-679-730为什么默认是成功的?错误条件为3个，若其二不符合，前面是成功的却也算成功，是否过于含糊？
+DVTSTBCA_SCAPDU（这个接口的功能不是很理解）
+为什么所有的打印都开在了DTV中？
+为什么在CA中要设置录制/播放--Srvplay开始/停止--接口？
+
+
+TPM驱动
+525-2-emm 数据包
+//________________________________________________________________________________________begin
+static void CBNewExmSection(SectionEventType eEvent, Section* pSection, void* pUserData, HCSHANDLE hRequest)//获取EMC EMM数据
+		|SECTION 事假处理-（更新、超时、数据重复。。。）---》版本信息改变往下，进行动作如下
+nRet = CA_PutDataInQueue((DWORD)ii, pSection->m_pucDataBuf, (DWORD)pSection->m_nDataLen);
+		|
+static void CS_VD_DF_RunCallBack( unsigned int nChID )/向外注册
+		|
+GetDevicePrivateData(g_DFStatus[nChID].m_DFReferentID, &stPrivateData, sizeof(vd_df_open_st))//获取新的EMM/ECM结束
+
+VD_IO( vd_driver_type_e eDriverType,vd_ref_id wRefId,ia_word16 wOpCode,ia_word32 wDataWriteSize,void *pvDataWrite,ia_word32 *pwDataReadSize,void *pvDataRead )//IO操作的类型
+		|
+CS_VD_DF_IO ：进行driver filter相关处理，set_pid,alloc_filter,read_section...
+		|
+VD_DF_READ_SECTION:
+		|		
+unsigned char* DMUX_DRV_GetSection(DWORD dwChannelId, DWORD* pnSectionLen)//从消息队列中取出数据
+
+
+CS_VD_SC_IO(vd_ref_id wRefId//智能卡的操作
+		|
+SC_DRV_SendData( (BYTE)nIndex+1, (BYTE)dwLen, pcCommand, (DWORD*)pwDataReadSize, pvDataRead);
+		|
+SmcGetStatus(s_dwSmcPort, &eCardState);
+		|
+CSSMCResetSmartCard(s_dwSmcPort, acAtrBuf, &dwAtrLen);
+		|
+CSUDISMCReset((int)dwCardIndex, (unsigned char*)pucATR, (int *)pdwAtrLength, TRUE);//流程结束
+
+CSUDISMCDataExchange(int nCardIndex, unsigned char  *pucWriteData,int nNumberToWrite,unsigned char  *pcResponseData,int *pnNumberRead,unsigned char  *pucStatusWord)//卡被切换了
+		|
+ CSUDISMCDetect(int nCardIndex)//检测智能卡
+		使用海思的智能卡接口（SCI）//以上为udi_smc
+		|
+DVTSTBCA_SCAPDU（这个接口的功能不是很理解）---SmcGetStatus(g_eSmcPortConfig.nPort, &eSmcStatus)!= E_SMC_IN--->SMCA_DisposeMsgToFta(CA_ALARM, CA_ALARM_SMC_OUT, (DWORD)CS_CS_GetCryptType()加扰类型的获取)---CSSMCDataExchange/设备与智能卡之间进行数据交换-检测卡（获取卡的状态信息）
+
+CA具有很多信息通知接口:新的表信息，CA服务的开启等
+
+FillUserEPG//用户发出节目列表请求-EPG流程：
+
+节目搜索流程与EPG流程之间的区别？
+
+
+
+
+//________________________________________________________________________________________end
+
+
+//________________________________________________________________________________________begin
+CA消息接收和获取的流程：
+//static void CaTaskMain( void *argv )
+本地得到消息--》应用显示：
+//void *OS_DRV_ReceiveMessage( ia_word16 *pwMessageLength 输出参数)
+		
+获取细节：
+	dwTaskId = CSGetCurTaskID();  //OS20. this should be changed when OS changed. zyx
+	dwQueueId = CA_LookupQueueId( dwTaskId );
+
+if(E_CA_OSP_SUCCESS != CS_CA_OSPQueueGetMessageEx(dwQueueId, (void*)&pstMSG, E_CA_OSP_QUEUE_TASK_WAIT, 0xFFFFFFFF, MAX_MSG_SIZE))
+if(CSReceiveMsg(dwQueueId, pstMsg, (int)dwMsgSize, dwWaiteTimeMs) == CS_OSP_SUCCESS)
+nRet = CSUDIOSMsgQueueReceive( (CSUDI_HANDLE)hMsgQueue, pvMsg, nMaxMsgBytes, dwTimeout);
+                DWORD dwCopySize = (DWORD)nMaxMsgBytes > ( Qptr->ByteNodeSize / 2 ) ? ( Qptr->ByteNodeSize / 2 ) : (DWORD)nMaxMsgBytes;
+                memcpy ( pvMsg, Qptr->StartPtr + Head, dwCopySize );
+
+
+ 	pvMsgAddr = (void*)(pstMSG->m_pvData);
+	*pwMessageLength = (WORD)pstMSG->m_dwLength;
+抛出去处理
+typedef struct
+{
+	enum CA_MESSAGE_SET enMsgType;
+	union
+	{
+		CA_SCELL_MSG stSCellMsg;
+		CA_MSG_T     stCaMsg;
+	} u;
+} CA_SCELL_MESSAGE_STRUCT;
+//static void CaProcessMsg( CA_SCELL_MESSAGE_STRUCT *pstCA_Msg )
+pstSCellMsg = (CA_SCELL_MSG*)(&pstCA_Msg->u.stSCellMsg);
+typedef struct
+{
+	ca_drv_message_type_e  eOpcode;
+	ia_word16              wOpSeqNo;
+	ia_word16              wLength;
+	void*                  pvMessage;
+}CA_SCELL_MSG;
+
+//ProcessSCellMsg(pstSCellMsg);
+
+
+(*afnParseReply[ wOpCode ])( pstSCellMsg );--->IRD_MSG_ParseDecoderMsg( const CA_SCELL_MSG *pstSCellMsg )
+	pstMsg = (msg_decoder_data_st*)pstSCellMsg->pvMessage;
+
+	IRD_MSG_Parser(pbMsg, wSrvHandle);进行解析
+
+消息的获取：
+s3_dvb_client_3.24.0.lib//CA厂商调用
+ CA_DRV_Message( ca_drv_message_type_e eOpcode, ia_word16 wOpSeqNo, ia_word16 wLength, void *pvMessage )//打印消息
+		ansi_memcpy(  pvCopyMessage, pvMessage, wLength );
+		pstMsg = (CA_SCELL_MESSAGE_STRUCT*)ALLOCATE_MEMORY( CA_SCELL_MESSAGE_STRUCT, 1 );
+
+		enRet =	OS_DRV_SendMessage(caMessageQueue, sizeof(CA_SCELL_MESSAGE_STRUCT),pstMsg);
+		if(E_CA_OSP_SUCCESS != CS_CA_OSPQueueSendMessageEx2(dwQueueId, (void*)&pstMSG, MAX_MSG_SIZE, /*NEVER_TIMEOUT*/ 0))
+		if(CSSendMsg(dwQueueId, pstMsg, (int)dwMsgSize,  dwTimeOut) == CS_OSP_SUCCESS)
+
+
+libandroid_runtime.so  libhi_sample_common.so  libnativehelper
+
+//_________________________________________________________________________________________end
+
+换卡需要换台的代码修改：
+cainject 
+startCA
+
+
+	/*若两次的卡类型不一样，就进行CAstart操作,避免换卡之后，需要切台才可以继续播放*/
+	//begin
+	if (s_nSmcType != nType)
+	{
+		s_nSmcType = nType;
+		if (CSNotifyChangeCardStartCA() == -1)
+		{
+			LOGD(" CSChangeCardStartCA failed !\n");
+		}
+		LOGD(" --->CSChangeCardStartCA !\n");
+	}
+	
+	//end author:wulijiao
+
+
+
+SMC_TYPE_E CSCAGetLastSmcType(void)
+{	
+	//LOGD(" CSCAGetSmcType g_nSmcType=%d\n", g_nSmcType);
+	return LastSMCType;
+}
+
+
+/*
+增加接口目的：解决换卡后，需要切台才可以继续收看节目问题
+*/
+//begin
+int CSNotifyChangeCardStartCA(void)
+{
+	T_CAINJECT_QueueMsg  Msg;
+	memset(&Msg, 0, sizeof(Msg));
+	Msg.m_dw1st= NOTICE_START_CA;
+	Msg.m_dw2nd = &s_caInject;
+	if(CSUDIOSMsgQueueSend(g_unQueMainId,(const void *)&Msg,16, 0) != CSUDI_SUCCESS)
+	{
+		LOGD(  "[%s][%s][%d]Send NOTICE_START_CA error !\r\n", __FILE__, __FUNCTION__, __LINE__);
+		return FAILURE;
+	}
+	return 0;
+}
+//end
+//author:wulijiao

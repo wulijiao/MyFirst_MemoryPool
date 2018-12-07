@@ -1,0 +1,70 @@
+----------------------------EPG:
+数据获取流程：
+NIT表→SDT表→EIT表→生成EPG
+NIT：
+频率、符号率、调制方式
+节目搜索过程：
+CAT ---> BAT ---> PMT/PAT ---> NIT/SDT ---> 
+
+节目搜索流程：
+------》void SearchThread( PVOID pParam )----》 Searching::SearchEx ---》pBaseSearch->StartSearchEx---》BaseSearch::StartSearchEx/ UniSearch::Start ---》UniSearch::SearchTransponder --》 StartOneNITPrivateSearch/StartOneDeliverSearch/GetNextDeliverHandle----》AddCommonDeliver --->  
+
+		搜索过程：int CSSICInit(void) --》sic_loader_monitor(void *data)  ---》data_receiver（）---》NGBCableSearch::StartSearch（）--》CSShellSearchCreateUI（）--》CreatePATPMTSearchUI（）--》InsertSearchHandle（）--》InsertSearchHandle（）
+		dtv.sicache表数据请求：CSSICLoadTable（）---》CSSICLoadTableByFreq（）--》SIC_LoadTable()/SIC_LoadExternTable()
+		dtv.sicache表数据的监测：CSSICMonitorTable（）--》SIC_LoadTable（）--》SIC_loader_load（）---》SIC_Load_Table（）--》Section2CSectionRequest(&reqInfo, SIC_Sections_Notify);
+		Section:请求表数据Demux-SIC_LoadTable()--->Section2CSectionRequest()-->............................SectionWorker.RequestSection() 
+
+component/CSDTV/service/dtv/Search/Src/Searching.cpp:636:            CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH %s %d]search action %d start!\n", __FUNCTION__, __LINE__, eSearchAction);
+component/CSDTV/service/dtv/Search/Src/Searching.cpp:704:            CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH %s %d]search action %d end!\n", __FUNCTION__, __LINE__, eSearchAction);
+
+dtv/Search/Src/BaseSearch.cpp:714:	CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_Search] StartSearchEx sourceType = %d\r\n", m_nSourceType);
+
+dtv/Search/Src/PATPMTSearch.cpp:746:		CSDebug(DBG_DTV_SEARCH, ERROR_LEVEL, "[USP-Search] RequetSource Result: 0x%x\r\n", bRe
+
+		dtv/si_cache/cssi_cache.c:2282:    CSDEBUG( DBG_DTV_SICACHE ,DEBUG_LEVEL,"SILoader: To CSSICLoadTable() 
+		dtv/si_cache/cssi_cache.c:2218:    CSDEBUG( DBG_DTV_SICACHE ,DEBUG_LEVEL,"SILoader: To CSSICLoadTableByFreq() :\n");
+		dtv/si_cache/cssi_cache.c:
+
+
+dtv/Search/Src/BaseSearch.cpp:321:		CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH]SOURCE_CONNECTED\n");
+
+	component/CSDTV/service/dtv/Search/Src/PATPMTSearch.cpp:131:		CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH] Wait for tunner result--StartOneDeliverSearch:0x%x!\n", nRe);
+	component/CSDTV/service/dtv/Search/Src/UniSearch.cpp:155:			CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH] Wait for tunner result--StartOneDeliverSearch:0x%x!\n", nRe);
+	component/CSDTV/service/dtv/Search/Src/UniSearch.cpp:2835:			CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH] Wait for tunner result--StartOneDeliverSearch:0x%x!\n", nRe);
+
+component/CSDTV/service/dtv/Search/Src/BaseSearch.cpp:406:				CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH]SINotify COMPLETE\n");
+component/CSDTV/service/dtv/Search/Src/BaseSearch.cpp:410:				CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH]SINotify COMPLETE ok\n");
+
+	component/CSDTV/service/dtv/Search/Src/PATPMTSearch.cpp:248:			CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH] Wait for SI result--StartOneDeliverSearch:0x%x!\n", nRe);
+	component/CSDTV/service/dtv/Search/Src/UniSearch.cpp:249:				CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH] Wait for SI result--StartOneDeliverSearch:0x%x!\n", nRe);
+
+component/CSDTV/service/dtv/Search/Src/DataService.cpp:155:	CSDebug(DBG_DTV_SEARCH, ERROR_LEVEL, "AddCommonDeliver -- hDataTransponder = 0x%x, hDataContainer = 0x%x,fre=%d\r\n", hDataTransponder, hDataContainer,
+component/CSDTV/service/dtv/Search/Src/DataService.cpp:159:	CSDebug(DBG_DTV_SEARCH, ERROR_LEVEL, "AddCommonDeliver -- tempSourceID:[0x%x,0x%x] %x\r\n", tempSourceID.m_wOriginal_network_id, tempSourceID.m_wTSID, nRet);
+component/CSDTV/service/dtv/Search/Src/DataService.cpp:175:	CSDebug(DBG_DTV_SEARCH, ERROR_LEVEL, "AddCommonDeliver -- nRet = 0x%x, hDataTransponder = 0x%x, hDataContainer = 0x%x, hData = 0x%x\r\n", nRet, hDataTransponder, hDataContainer,hData);
+component/CSDTV/service/dtv/Search/Src/DataService.cpp:179:	CSDebug(DBG_DTV_SEARCH, ERROR_LEVEL, "AddCommonDeliver -- stSourceID.tsid = 0x%x\r\n", stSourceID.m_wTSID);
+
+	dtv/Search/Src/UniSearch.cpp:444:   CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH] PATPMT: index = %d hTransd 
+	dtv/Search/Src/PATPMTSearch.cpp:402:	CSDEBUG(DBG_DTV_SEARCH, INFO_LEVEL, "[USP_SEARCH] PATPMT: index = %d hTransd = 0x%x sdtVersion = 0x%x\r\n",
+
+
+
+
+CSUSPServiceManager----》
+BOOL CSUSPServiceManager::Start( void )
+{
+	CSUDIOSThreadCreate(strThreadName,m_nMainPriority,m_nMainStackSize,RunServiceManager,this,&hThread);
+}
+void CSUSPServiceManager::Run( void )
+void CSUSPServiceManager::T_START_PLAY（）
+rtg_init7();		//启动锁频
+BOOL AgentSource::RequestSource( HCSHANDLE hSource, BOOL bImmediatelyUse )
+m_sourceHelper.ConnectSource(m_hTransponder,m_hDataContainer);
+pAgentSource->SourceNotify((HCSHANDLE)this, WAITTINGSOURCE, 0, 0);
+m_pCallback( SIGNAL_CONNECTED, NULL );
+
+
+问题：
+在手动搜索的时候，调制方式是固定的？
+--- 盲扫与自动搜索是一致的，参数是已经设置好的
+谁对表数据信息进行了解析？ ----  有专门的SECTION模块
+
