@@ -282,6 +282,7 @@ libandroid_runtime.so  libhi_sample_common.so  libnativehelper
 iLocalRequestPAT -- iPATCallBack -- iPmtCallback --- CSSICLoadTable --- CSSICLoadTableByFreq --- SIC_LoadTable ---
 iLocalRequestCAT --- iCATCallBack --- 
 CaTaskMainDealCAT 
+数码CA
 CaParseCAT --- DVTCASTB_CASIDVerify 调用第三方库，检查CASID是否正确  ---- wEmmPid
 DVTCASTB_SetEmmPid --- CAS模块将根据设置的EMMPID信息进行EMM数据接收处理 --- 
 CaTaskMainDealPMT
@@ -331,7 +332,15 @@ CA线程服务启动：已开启则直接使用，未启动则重新启动（在初始化时，已创建）
 CAT数据：数据更新
 PMT数据：数据更新
 CA线程服务停止：释放句柄、释放demux、CA_TASK_SendMessage-请求停止task（客户端发出停止caapp-》服务停止catask）、softcell资源的是否
-CA创建：		main（）；CSDTVALManagerServiceInit（）；DTVInit（）；DTVInit（）；CSRegisterMMCPExternalCB();CSCreateCA();CaInjectTaskMain（CSStopCA、iLocalRequestPAT、iLocalRequestCAT、CSStartCA）；iStartCAWithTable（）；
+CA创建：		main（）；CSDTVALManagerServiceInit（）；DTVInit（）；DTVInit（）；CSRegisterMMCPExternalCB();CSCreateCA();
+CaInjectTaskMain（CSStopCA、iLocalRequestPAT、iLocalRequestCAT、CSStartCA）；iStartCAWithTable（）；
 
 解扰数据交换：New ECM
-g_dwChipId(Publicid)/CSCASCWLoadCWPK（）; CSSMCDataExchange（）；分配一个解扰的通道ID-->CSDSMAllocateDescrambleEX(HCSHANDLE hHandle ,DWORD *pdwDescrambleID); PIDCSDSMSetDescramblePID(DWORD dwDescrambleID,WORD wPID )-->为解扰的通道ID指定过滤的;CS_CA_ProcessCW（非高级安全芯片-》CSCADealNAChipsetNASecureCW-非高级安全芯片-》CSCADealChipsetNASecureCW）；DMUX_DRV_SetDescramblerEvenKey（dwDescrambleID, abOutKey, bTempLength, 1）；CS_CA_DSMSetEvenKeyValue（）；CSDSMDescrambleSetEvenKeyValue（设置解扰通道的偶Key值）；
+g_dwChipId(Publicid)/CSCASCWLoadCWPK（）; CSSMCDataExchange（）；
+分配一个解扰的通道ID-->CSDSMAllocateDescrambleEX(HCSHANDLE hHandle ,DWORD *pdwDescrambleID); 
+CSDSMSetDescramblePID(DWORD dwDescrambleID,WORD wPID )-->为解扰的通道ID指定过滤的;
+CS_CA_ProcessCW（非高级安全芯片-》CSCADealNAChipsetNASecureCW-非高级安全芯片-》CSCADealChipsetNASecureCW）；
+DMUX_DRV_SetDescramblerEvenKey（dwDescrambleID, abOutKey, bTempLength, 1）；
+CS_CA_DSMSetEvenKeyValue（）；CSDSMDescrambleSetEvenKeyValue（设置解扰通道的偶Key值）；
+
+NGB_DB ：对表数据进行了缓存，便于其他模块的查询

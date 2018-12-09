@@ -1,0 +1,435 @@
+07-20 19:26:08.293 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:08.293 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+获取到了Ecm数据：更换频繁
+07-20 19:26:08.293 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:08.293 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:40
+07-20 19:26:08.295 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SC_DRV_SendData] Start---cSlot:1, cLen:45, pacCommand:b2fa9402, pacReplay:b2fa97a0
+07-20 19:26:08.295 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Start---dwSmcStatus: 00000005
+07-20 19:26:08.295 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Exit---nRe:0, peStateSmc:00000001
+
+07-20 19:26:08.384 D/MMCP    ( 1644): <IrdetoSmc> [ERROR]  CSSMCDataExchange = 0
+07-20 19:26:08.449 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866 /*过滤器获得数据*/
+07-20 19:26:08.449 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:08.450 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:08.450 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:08.450 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:08.450 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:08.450 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:08.450 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:08.450 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+
+设置过滤器及通道，用于过滤EMM数据；
+CA_TASK_SendMessage()  在启动CA服务的时候DTV会通知CAT表变化，其余的都是通过Tuner的回调函数进行监听的；
+开启服务的时候、频点信息发生变化的时候；
+CBNewExmSection-- 过滤得到数据的通知
+先要获得获取到，EMM数据：其中有卡号信息，每隔一段时间便进行数据监测；
+07-20 19:26:08.450 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:1, SectionLen:b2fa1d04
+07-20 19:26:08.450 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:08.451 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:1, SectionLen:b2fa1d04
+07-20 19:26:08.451 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:60
+07-20 19:26:08.451 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:1, SectionLen:b2fa1d04
+07-20 19:26:08.451 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:60
+07-20 19:26:08.452 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:08.452 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:08.452 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:08.452 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:1, SectionLen:b2fa1d04
+07-20 19:26:08.452 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:60
+07-20 19:26:08.452 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_SetFilter] Start---ChannelId:1, FilterId:0, pcMask:b2fa1c54, pcMatch:b2fa1c44
+07-20 19:26:08.454 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] SetFilter  Request again 
+07-20 19:26:08.456 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_SetFilter] Exit
+07-20 19:26:08.457 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SC_DRV_SendData] Start---cSlot:1, cLen:64, pacCommand:b2fa924a, pacReplay:b2fa95e8
+07-20 19:26:08.457 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Start---dwSmcStatus: 00000005
+07-20 19:26:08.457 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Exit---nRe:0, peStateSmc:00000001
+07-20 19:26:08.592 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:08.592 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:08.593 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:08.593 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:08.593 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:40
+
+
+07-20 19:26:08.618 D/MMCP    ( 1644): <IrdetoSmc> [ERROR]  CSSMCDataExchange = 0
+07-20 19:26:08.620 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] [CS_VD_DD] CS_VD_DD_IO wRefId = 4 wOpCode = 41
+07-20 19:26:08.620 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] [CS_VD_DD] CS_VD_DD_IO dwDescrambleID = ffff0001, i=0
+07-20 19:26:08.620 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] VD_DD_SET_KEY  nDescID = 0xffff0001 
+07-20 19:26:08.620 D/MMCP    ( 1644): <IrdetoRsa> [ERROR] [CS_CA_GetSecureCWFlag]:79
+07-20 19:26:08.620 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR]  VD_DD_SET_KEY  bIsClearCW:= 1
+07-20 19:26:08.620 D/MMCP    ( 1644): <IrdetoRsa> [ERROR] [CS_CA_ProcessCW]:73
+07-20 19:26:08.620 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR]  VCS_CA_ProcessCW :nRet= 0
+07-20 19:26:08.620 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] DMUX_DRV_SetDescramblerEvenKey nDescID = 0xffff0001 Length = 8
+07-20 19:26:08.620 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_SetDescramblerEvenKey] Start---nDescId:-65535, pcKey:b2fa1ca4, cAlg:1
+07-20 19:26:08.620 D/MMCP    ( 1644): <IrdetoUSPDependence> [CS_CA_DSMSetEvenKeyValue]:664
+
+07-20 19:26:08.621 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SC_DRV_SendData] Start---cSlot:1, cLen:45, pacCommand:b2fa9402, pacReplay:b2fa97a0
+07-20 19:26:08.621 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Start---dwSmcStatus: 00000005
+07-20 19:26:08.621 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Exit---nRe:0, peStateSmc:00000001
+07-20 19:26:08.621 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] [CS_VD_DD] CS_VD_DD_IO wRefId = 5 wOpCode = 41
+07-20 19:26:08.621 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] [CS_VD_DD] CS_VD_DD_IO dwDescrambleID = ffff0002, i=1
+07-20 19:26:08.622 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] VD_DD_SET_KEY  nDescID = 0xffff0002 
+07-20 19:26:08.622 D/MMCP    ( 1644): <IrdetoRsa> [ERROR] [CS_CA_GetSecureCWFlag]:79
+07-20 19:26:08.622 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR]  VD_DD_SET_KEY  bIsClearCW:= 1
+07-20 19:26:08.622 D/MMCP    ( 1644): <IrdetoRsa> [ERROR] [CS_CA_ProcessCW]:73
+07-20 19:26:08.622 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR]  VCS_CA_ProcessCW :nRet= 0
+07-20 19:26:08.622 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] DMUX_DRV_SetDescramblerEvenKey nDescID = 0xffff0002 Length = 8
+07-20 19:26:08.622 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_SetDescramblerEvenKey] Start---nDescId:-65534, pcKey:b2fa1ca4, cAlg:1
+07-20 19:26:08.622 D/MMCP    ( 1644): <IrdetoUSPDependence> [CS_CA_DSMSetEvenKeyValue]:664
+
+07-20 19:26:08.623 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] [CS_VD_DD] CS_VD_DD_IO wRefId = 4 wOpCode = 41
+07-20 19:26:08.623 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] [CS_VD_DD] CS_VD_DD_IO dwDescrambleID = ffff0001, i=0
+07-20 19:26:08.623 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] VD_DD_SET_KEY  nDescID = 0xffff0001 
+07-20 19:26:08.623 D/MMCP    ( 1644): <IrdetoRsa> [ERROR] [CS_CA_GetSecureCWFlag]:79
+07-20 19:26:08.623 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR]  VD_DD_SET_KEY  bIsClearCW:= 1
+07-20 19:26:08.623 D/MMCP    ( 1644): <IrdetoRsa> [ERROR] [CS_CA_ProcessCW]:73
+07-20 19:26:08.623 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR]  VCS_CA_ProcessCW :nRet= 0
+07-20 19:26:08.623 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] DMUX_DRV_SetDescramblerOddKey nDescID = 0xffff0001 Length = 8
+07-20 19:26:08.623 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] DMUX_DRV_SetDescramblerOddKey:2073
+07-20 19:26:08.623 D/MMCP    ( 1644): <IrdetoUSPDependence> [CS_CA_DSMSetOddKeyValue]:654
+
+07-20 19:26:08.624 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] [CS_VD_DD] CS_VD_DD_IO wRefId = 5 wOpCode = 41
+07-20 19:26:08.625 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] [CS_VD_DD] CS_VD_DD_IO dwDescrambleID = ffff0002, i=1
+07-20 19:26:08.625 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] VD_DD_SET_KEY  nDescID = 0xffff0002 
+07-20 19:26:08.625 D/MMCP    ( 1644): <IrdetoRsa> [ERROR] [CS_CA_GetSecureCWFlag]:79
+07-20 19:26:08.625 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR]  VD_DD_SET_KEY  bIsClearCW:= 1
+07-20 19:26:08.625 D/MMCP    ( 1644): <IrdetoRsa> [ERROR] [CS_CA_ProcessCW]:73
+07-20 19:26:08.625 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR]  VCS_CA_ProcessCW :nRet= 0
+07-20 19:26:08.625 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] DMUX_DRV_SetDescramblerOddKey nDescID = 0xffff0002 Length = 8
+07-20 19:26:08.625 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] DMUX_DRV_SetDescramblerOddKey:2073
+07-20 19:26:08.626 D/MMCP    ( 1644): <IrdetoUSPDependence> [CS_CA_DSMSetOddKeyValue]:654
+
+07-20 19:26:08.711 D/MMCP    ( 1644): <IrdetoSmc> [ERROR]  CSSMCDataExchange = 0
+07-20 19:26:08.572 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:08.572 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:08.572 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:08.572 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:08.572 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:40
+07-20 19:26:08.574 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SC_DRV_SendData] Start---cSlot:1, cLen:45, pacCommand:b2fa9402, pacReplay:b2fa97a0
+07-20 19:26:08.574 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Start---dwSmcStatus: 00000005
+07-20 19:26:08.574 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Exit---nRe:0, peStateSmc:00000001
+
+07-20 19:26:08.663 D/MMCP    ( 1644): <IrdetoSmc> [ERROR]  CSSMCDataExchange = 0
+07-20 19:26:11.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:11.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:11.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:11.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:11.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:11.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:11.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:11.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:11.086 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+
+07-20 19:26:11.086 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:11.601 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866                                           ---》VD_DF_SET_FILTER
+07-20 19:26:11.601 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+
+07-20 19:26:11.601 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+
+07-20 19:26:11.601 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04 ----》 VD_DF_READ_SECTION
+07-20 19:26:11.601 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:40
+07-20 19:26:11.603 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SC_DRV_SendData] Start---cSlot:1, cLen:45, pacCommand:b2fa9402, pacReplay:b2fa97a0  ---》VD_SC_COMMUNICATE 
+07-20 19:26:11.603 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Start---dwSmcStatus: 00000005
+07-20 19:26:11.603 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Exit---nRe:0, peStateSmc:00000001
+07-20 19:26:11.692 D/MMCP    ( 1644): <IrdetoSmc> [ERROR]  CSSMCDataExchange = 0
+
+07-20 19:26:13.219 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.219 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.219 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.219 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.219 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.219 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [CA-DMX]  CA_Get Ecm or EMM
+07-20 19:26:13.219 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.219 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:13.219 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.219 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.219 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.219 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.220 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.220 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:13.220 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.220 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:13.250 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.250 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.250 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.250 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.250 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.250 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.250 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:13.250 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.250 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.250 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.251 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.251 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:13.251 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.251 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.251 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:13.342 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.342 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.343 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.343 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.343 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.343 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.343 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:13.343 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.343 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.343 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:13.374 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.374 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.374 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.374 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.374 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.374 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.375 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:13.375 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.375 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.375 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:13.376 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SC_DRV_SendData] Start---cSlot:1, cLen:66, pacCommand:b2fa9402, pacReplay:b2fa97a0
+07-20 19:26:13.376 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Start---dwSmcStatus: 00000005
+07-20 19:26:13.376 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Exit---nRe:0, peStateSmc:00000001
+07-20 19:26:13.402 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.402 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.402 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.403 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.403 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:13.405 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.405 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.406 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.406 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.406 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:13.435 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.435 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.436 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.436 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.436 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.436 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:13.436 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.436 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.436 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:13.466 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.466 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.466 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.466 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.466 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.466 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [CA_PutDataInQueue] Start...0
+07-20 19:26:13.467 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.467 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.467 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:13.467 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.467 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:13.487 D/MMCP    ( 1644): <IrdetoSmc> [ERROR]  CSSMCDataExchange = 0
+07-20 19:26:13.387 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.387 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.387 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.387 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.387 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:40
+07-20 19:26:13.389 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SC_DRV_SendData] Start---cSlot:1, cLen:45, pacCommand:b2fa9402, pacReplay:b2fa97a0
+07-20 19:26:13.389 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Start---dwSmcStatus: 00000005
+07-20 19:26:13.389 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Exit---nRe:0, peStateSmc:00000001
+07-20 19:26:13.478 D/MMCP    ( 1644): <IrdetoSmc> [ERROR]  CSSMCDataExchange = 0
+07-20 19:26:13.721 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.721 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.721 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.721 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.721 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:65
+07-20 19:26:13.783 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.783 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.783 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.783 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.783 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.783 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:901
+07-20 19:26:13.784 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.784 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:65
+07-20 19:26:13.784 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.784 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.784 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:65
+07-20 19:26:13.812 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.812 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.812 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.813 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.813 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:65
+07-20 19:26:13.843 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.843 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.843 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.844 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.844 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:65
+07-20 19:26:13.844 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.845 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.845 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.845 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.845 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:65
+07-20 19:26:13.846 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SC_DRV_SendData] Start---cSlot:1, cLen:68, pacCommand:b2fa9402, pacReplay:b2fa97a0
+07-20 19:26:13.847 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Start---dwSmcStatus: 00000005
+07-20 19:26:13.847 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Exit---nRe:0, peStateSmc:00000001
+07-20 19:26:13.904 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.904 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.905 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.905 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.905 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:65
+07-20 19:26:13.960 D/MMCP    ( 1644): <IrdetoSmc> [ERROR]  CSSMCDataExchange = 0
+07-20 19:26:13.377 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.377 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.377 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.377 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.377 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.378 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.378 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.378 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.378 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.378 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.378 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:13.378 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.378 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:13.378 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.378 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:13.379 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.379 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.379 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.379 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.379 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:13.407 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.407 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.407 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.407 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.407 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [CBNewExmSection] Start---eEvent:2, hRequest:0x00000012
+07-20 19:26:13.407 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.407 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.408 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.408 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:13.408 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.408 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:13.438 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.438 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.438 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.438 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.438 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.439 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.439 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.439 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.439 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [CA_PutDataInQueue] Start...0
+07-20 19:26:13.439 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.439 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:13.439 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.439 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.439 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.439 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:13.439 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.440 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.440 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:13.440 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.440 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:13.441 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SC_DRV_SendData] Start---cSlot:1, cLen:69, pacCommand:b2fa9402, pacReplay:b2fa97a0
+07-20 19:26:13.441 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Start---dwSmcStatus: 00000005
+07-20 19:26:13.441 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Exit---nRe:0, peStateSmc:00000001
+07-20 19:26:13.470 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.470 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.470 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.470 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.470 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.470 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.470 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:13.470 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.470 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.471 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.471 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.471 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.471 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.471 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.471 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:13.471 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.471 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.471 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:13.471 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.471 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:13.499 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.499 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.499 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.499 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.499 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:13.500 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:13.500 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:13.500 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:13.500 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:13.500 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:66
+07-20 19:26:13.556 D/MMCP    ( 1644): <IrdetoSmc> [ERROR]  CSSMCDataExchange = 0
+07-20 19:26:16.371 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:16.371 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:16.371 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:16.371 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:16.371 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:40
+07-20 19:26:16.373 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SC_DRV_SendData] Start---cSlot:1, cLen:45, pacCommand:b2fa9402, pacReplay:b2fa97a0
+07-20 19:26:16.373 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Start---dwSmcStatus: 00000005
+07-20 19:26:16.373 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Exit---nRe:0, peStateSmc:00000001
+07-20 19:26:16.462 D/MMCP    ( 1644): <IrdetoSmc> [ERROR]  CSSMCDataExchange = 0
+07-20 19:26:19.084 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:19.084 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:19.084 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:19.084 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:19.084 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:19.084 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:1, SectionLen:b2fa1d04
+07-20 19:26:19.084 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [CA-DMX]  CA_Get Ecm or EMM
+07-20 19:26:19.084 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:63
+07-20 19:26:19.084 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:19.084 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:19.084 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:19.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:1, SectionLen:b2fa1d04
+07-20 19:26:19.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:60
+07-20 19:26:19.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:19.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:19.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:19.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:1, SectionLen:b2fa1d04
+07-20 19:26:19.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:19.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:1, SectionLen:b2fa1d04
+07-20 19:26:19.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:60
+07-20 19:26:19.085 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_SetFilter] Start---ChannelId:1, FilterId:0, pcMask:b2fa1c54, pcMatch:b2fa1c44
+07-20 19:26:19.086 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] SetFilter  Request again 
+07-20 19:26:19.087 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_SetFilter] Exit
+07-20 19:26:19.089 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SC_DRV_SendData] Start---cSlot:1, cLen:64, pacCommand:b2fa924a, pacReplay:b2fa95e8
+07-20 19:26:19.089 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Start---dwSmcStatus: 00000005
+07-20 19:26:19.089 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Exit---nRe:0, peStateSmc:00000001
+07-20 19:26:19.249 D/MMCP    ( 1644): <IrdetoSmc> [ERROR]  CSSMCDataExchange = 0
+07-20 19:26:19.250 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] [CS_VD_DD] CS_VD_DD_IO wRefId = 4 wOpCode = 41
+07-20 19:26:19.250 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] [CS_VD_DD] CS_VD_DD_IO dwDescrambleID = ffff0001, i=0
+07-20 19:26:19.250 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] VD_DD_SET_KEY  nDescID = 0xffff0001 
+07-20 19:26:19.250 D/MMCP    ( 1644): <IrdetoRsa> [ERROR] [CS_CA_GetSecureCWFlag]:79
+07-20 19:26:19.250 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR]  VD_DD_SET_KEY  bIsClearCW:= 1
+07-20 19:26:19.250 D/MMCP    ( 1644): <IrdetoRsa> [ERROR] [CS_CA_ProcessCW]:73
+07-20 19:26:19.250 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR]  VCS_CA_ProcessCW :nRet= 0
+07-20 19:26:19.250 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] DMUX_DRV_SetDescramblerEvenKey nDescID = 0xffff0001 Length = 8
+07-20 19:26:19.250 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_SetDescramblerEvenKey] Start---nDescId:-65535, pcKey:b2fa1ca4, cAlg:1
+07-20 19:26:19.250 D/MMCP    ( 1644): <IrdetoUSPDependence> [CS_CA_DSMSetEvenKeyValue]:664
+07-20 19:26:19.250 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] [CS_VD_DD] CS_VD_DD_IO wRefId = 5 wOpCode = 41
+07-20 19:26:19.250 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] [CS_VD_DD] CS_VD_DD_IO dwDescrambleID = ffff0002, i=1
+07-20 19:26:19.250 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] VD_DD_SET_KEY  nDescID = 0xffff0002 
+07-20 19:26:19.250 D/MMCP    ( 1644): <IrdetoRsa> [ERROR] [CS_CA_GetSecureCWFlag]:79
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR]  VD_DD_SET_KEY  bIsClearCW:= 1
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoRsa> [ERROR] [CS_CA_ProcessCW]:73
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR]  VCS_CA_ProcessCW :nRet= 0
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] DMUX_DRV_SetDescramblerEvenKey nDescID = 0xffff0002 Length = 8
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_SetDescramblerEvenKey] Start---nDescId:-65534, pcKey:b2fa1ca4, cAlg:1
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoUSPDependence> [CS_CA_DSMSetEvenKeyValue]:664
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] [CS_VD_DD] CS_VD_DD_IO wRefId = 4 wOpCode = 41
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] [CS_VD_DD] CS_VD_DD_IO dwDescrambleID = ffff0001, i=0
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] VD_DD_SET_KEY  nDescID = 0xffff0001 
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoRsa> [ERROR] [CS_CA_GetSecureCWFlag]:79
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR]  VD_DD_SET_KEY  bIsClearCW:= 1
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoRsa> [ERROR] [CS_CA_ProcessCW]:73
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR]  VCS_CA_ProcessCW :nRet= 0
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] DMUX_DRV_SetDescramblerOddKey nDescID = 0xffff0001 Length = 8
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] DMUX_DRV_SetDescramblerOddKey:2073
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoUSPDependence> [CS_CA_DSMSetOddKeyValue]:654
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] [CS_VD_DD] CS_VD_DD_IO wRefId = 5 wOpCode = 41
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] [CS_VD_DD] CS_VD_DD_IO dwDescrambleID = ffff0002, i=1
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] VD_DD_SET_KEY  nDescID = 0xffff0002 
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoRsa> [ERROR] [CS_CA_GetSecureCWFlag]:79
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR]  VD_DD_SET_KEY  bIsClearCW:= 1
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoRsa> [ERROR] [CS_CA_ProcessCW]:73
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR]  VCS_CA_ProcessCW :nRet= 0
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoVDDD> [ERROR] DMUX_DRV_SetDescramblerOddKey nDescID = 0xffff0002 Length = 8
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] DMUX_DRV_SetDescramblerOddKey:2073
+07-20 19:26:19.251 D/MMCP    ( 1644): <IrdetoUSPDependence> [CS_CA_DSMSetOddKeyValue]:654
+07-20 19:26:19.395 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] CBNewExmSection:866
+07-20 19:26:19.395 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] IsSectionNewExm:543
+07-20 19:26:19.395 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] --New ECM end ----
+07-20 19:26:19.396 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] [DMUX_DRV_GetSection] Start---dwChannelId:0, SectionLen:b2fa1d04
+07-20 19:26:19.396 D/MMCP    ( 1644): <IrdetoDmx> [ERROR] data len:40
+07-20 19:26:19.397 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SC_DRV_SendData] Start---cSlot:1, cLen:45, pacCommand:b2fa9402, pacReplay:b2fa97a0
+07-20 19:26:19.397 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Start---dwSmcStatus: 00000005
+07-20 19:26:19.397 D/MMCP    ( 1644): <IrdetoSmc> [ERROR] [SmcGetStatus] Exit---nRe:0, peStateSmc:00000001
+07-20 19:26:19.487 D/MMCP    ( 1644): <IrdetoSmc> [ERROR]  CSSMCDataExchange = 0
