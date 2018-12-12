@@ -341,61 +341,98 @@ IrdetoCaTaskMain()
 task:
 CaProcessMsg()
 task--> dDefineDescrambleService()---->begin
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => [wGroupHandle]: 0 serviceID = 28c  //catask  DefineDescrambleService()
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoUSPDependence> [ERROR] [CS_CA_OSPQueueSendMessage]:349
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] <= MSG_SERVICE_OPEN_REQUEST( type 1) //catsk  SendServiceOpenRequestMsg()CAapp接收来自应用的信息
-IrdetoCaTaskMain()
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoProg> [ERROR] [NOTIFY_PMT_SECTION] End
+DefineDescrambleService()start 
+	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => [wGroupHandle]: 0 serviceID = 28c  //catask  
+	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoUSPDependence> [ERROR] [CS_CA_OSPQueueSendMessage]:349
+	-->SendServiceOpenRequestMsg
+	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] <= MSG_SERVICE_OPEN_REQUEST( type 1) //catsk  SendServiceOpenRequestMsg()CAapp接收来自应用的信息
+	-->SendServiceOpenRequestMsg
+	IrdetoCaTaskMain()
+	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoProg> [ERROR] [NOTIFY_PMT_SECTION] End
+	IrdetoCaTaskMain（）
 
-task-->ParseServiceOpenReplyMsg
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => [GetSCellHandleStatus]: 0
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => [GetSCellHandle]: 65535
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => [SetSCellHandleStatus]: 1
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => SendServiceOpenRequestMsg:[wGroupHandle]: 0 serviceType = SERVICE_DVB_DESCRAMBLE
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] 
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] [CA_DRV_Message, 3751]eOpcode = 6, wOpSeqNo = 0, wLength = 4
-	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoUiReply> [ERROR]  CS_CA_DirectMessage start 
+	task-->ServiceHandleMechanism
+	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => [GetSCellHandleStatus]: 0
+	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => [GetSCellHandle]: 65535
+	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => [SetSCellHandleStatus]: 1
+	-->ServiceHandleMechanism
+	----->DefineDescrambleService
+	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => SendServiceOpenRequestMsg:[wGroupHandle]: 0 serviceType = SERVICE_DVB_DESCRAMBLE
+	----->DefineDescrambleService
+DefineDescrambleService() end 
+-->CA_DRV_Message //TASK Call Back To CaApp  -->OS_DRV_SendMessage
+	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] 
+	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] [CA_DRV_Message, 3751]eOpcode = 6, wOpSeqNo = 0, wLength = 4
+-->CA_DRV_Message
+
+-->CS_CA_DirectMessage //TASK Call Back To CaApp  -->OS_DRV_SendMessage
+	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoUiReply> [ERROR]  CS_CA_DirectMessage start send msg
+-->CS_CA_DirectMessage
+
+-->ProcessSCellMsg  //-->CellMsg
 07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] [ca_task]+++ wOpCode = 0x0006
+-->ProcessSCellMsg
+
+------>ParseServiceOpenReplyMsg  start-->CellMsg
 07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => MSG_SERVICE_OPEN_REPLY( type 1 ), index 0, handle = 1 
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] <= MSG_SERVICE_DEFINE (DES: +des, +msc)
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => [GetSCellHandleStatus]: 2
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => [GetSCellHandle]: 1
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] AddEcmSourceToDescrambleService glbdescrcount = 3
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] AddEcmSourceToDescrambleService streamcount = 2
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] gobal bDescrCount = 3, tag = 0x b, current PID=0x0904
-07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] gobal bDescrCount = 3, tag = 0x 9, current PID=0x119c
-07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] gobal bDescrCount = 3, tag = 0x 9, current PID=0x119d
-07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] <2788>streamPID = 0x1191, strdescrcount = 1
-07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] in stream bDescrCount = 1, tag = 0x52
-07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] <2788>streamPID = 0x1192, strdescrcount = 2
-07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] in stream bDescrCount = 2, tag = 0x52
-07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] in stream bDescrCount = 2, tag = 0x a
-07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] <= MSG_SERVICE_DEFINE (DES: +pmt)
-task-->AddEcmSourceToDescrambleService()end
+	->UpdateDefaultResourcesToDescrambleService
+	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] <= MSG_SERVICE_DEFINE (DES: +des, +msc)
+		->ServiceHandleMechanism
+		07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => [GetSCellHandleStatus]: 2
+		07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => [GetSCellHandle]: 1
+		->ServiceHandleMechanism
+	->UpdateDefaultResourcesToDescrambleService
+	
+	-->AddEcmSourceToDescrambleService()
+	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] AddEcmSourceToDescrambleService glbdescrcount = 3
+	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] AddEcmSourceToDescrambleService streamcount = 2
+	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] gobal bDescrCount = 3, tag = 0x b, current PID=0x0904
+	07-20 19:26:00.587 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] gobal bDescrCount = 3, tag = 0x 9, current PID=0x119c
+	07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] gobal bDescrCount = 3, tag = 0x 9, current PID=0x119d
+	07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] <2788>streamPID = 0x1191, strdescrcount = 1
+	07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] in stream bDescrCount = 1, tag = 0x52
+	07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] <2788>streamPID = 0x1192, strdescrcount = 2
+	07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] in stream bDescrCount = 2, tag = 0x52
+	07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] in stream bDescrCount = 2, tag = 0x a
+	07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] <= MSG_SERVICE_DEFINE (DES: +pmt)
+	task-->AddEcmSourceToDescrambleService()end 
+------>ParseServiceOpenReplyMsg end 
 task--> dDefineDescrambleService()----->end
 
-ServiceHandleMechanism()
+-->ServiceHandleMechanism()
 07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => [GetSCellHandleStatus]: 2
 07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] => [GetSCellHandle]: 1
 07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] 
-CA_DRV_Message()
+-->ServiceHandleMechanism()
+
+-->CA_DRV_Message()  SoftCell send msg to task
 07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] [CA_DRV_Message, 3751]eOpcode = 10, wOpSeqNo = 1, wLength = 72
 07-20 19:26:00.588 D/MMCP    ( 1643): [31m[1m<IrdetoUiReply> [ERROR]  CS_CA_DirectMessage start 
 07-20 19:26:00.589 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] [CA_DRV_Message, 3751]eOpcode = 10, wOpSeqNo = 1, wLength = 125
 07-20 19:26:00.589 D/MMCP    ( 1643): [31m[1m<IrdetoUiReply> [ERROR]  CS_CA_DirectMessage start 
 07-20 19:26:00.589 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] [CA_DRV_Message, 3751]eOpcode = 10, wOpSeqNo = 32768, wLength = 125
 07-20 19:26:00.589 D/MMCP    ( 1643): [31m[1m<IrdetoUiReply> [ERROR]  CS_CA_DirectMessage start 
-
+-->CA_DRV_Message()  SoftCell send msg to tas
+-->ProcessSCellMsg  //-->CellMs
 07-20 19:26:00.589 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] [ca_task]+++ wOpCode = 0x000a
+-->ProcessSCellMsg  //-->CellMs
+-->ParseServiceStatusMsg
 07-20 19:26:00.589 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] Service Handle = 1, source = 8, Status = 101, severity = 2, RscCount = 2, Srvsource = 8, SrvStatus = 101, Srvseverity = 2 
-07-20 19:26:00.589 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] Descramble service status.
-07-20 19:26:00.589 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] [Severity]Status-Source: [2]101-8
-07-20 19:26:00.589 D/MMCP    ( 1643): [31m[1m<IrdetoAlarmMsg> [ERROR] [CA_NotifyCurrentErrInfo]==>dwSrvHandle 0, ServiceType 1 
-07-20 19:26:00.589 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] [Current Error]Status-Source: [2]101-8
-07-20 19:26:00.589 D/MMCP    ( 1643): [31m[1m<IrdetoAlarmMsg> [ERROR] [CA_NotifyCurrentErrInfo] eSeverity 2, wStatus 101, eSource 8 
-07-20 19:26:00.590 D/MMCP    ( 1643): [31m[1m<IrdetoAlarmMsg> [ERROR] [CA_FindBarkerMsgTextNum]==>eSeverity = 2, wStatus = 101, eSource = 807-20 19:26:00.590 D/MMCP    ( 1643): [31m[1m<IrdetoAlarmMsg> [ERROR]  
+-->ParseServiceStatusMsg
+-->CA_SERVICE_DESCRAMBLE CA_SVCINFO_ParseDescrambleServiceInfo()
+	07-20 19:26:00.589 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] Descramble service status.
 
+	07-20 19:26:00.589 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] [Severity]Status-Source: [2]101-8
+		07-20 19:26:00.589 D/MMCP    ( 1643): [31m[1m<IrdetoAlarmMsg> [ERROR] [CA_NotifyCurrentErrInfo]==>dwSrvHandle 0, ServiceType 1 
+		07-20 19:26:00.589 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] [Current Error]Status-Source: [2]101-8
+		07-20 19:26:00.589 D/MMCP    ( 1643): [31m[1m<IrdetoAlarmMsg> [ERROR] [CA_NotifyCurrentErrInfo] eSeverity 2, wStatus 101, eSource 8 
+		07-20 19:26:00.590 D/MMCP    ( 1643): [31m[1m<IrdetoAlarmMsg> [ERROR] [CA_FindBarkerMsgTextNum]==>eSeverity = 2, wStatus = 101, eSource = 807-20 19:26:00.590 D/MMCP    ( 1643): [31m[1m<IrdetoAlarmMsg> [ERROR]  
+-->CA_SERVICE_DESCRAMBLE CA_SVCINFO_ParseDescrambleServiceInfo()
+
+-->ProcessSCellMsg  //-->CellMs
 07-20 19:26:00.590 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] [ca_task]+++ wOpCode = 0x000a
+-->ProcessSCellMsg  //-->CellMs
+-->ParseServiceStatusMsg
 07-20 19:26:00.590 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] Service Handle = 1, source = 9, Status = 34, severity = 4, RscCount = 3, Srvsource = 8, SrvStatus = 100, Srvseverity = 5 
 07-20 19:26:00.590 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] Descramble service status.
 07-20 19:26:00.590 D/MMCP    ( 1643): [31m[1m<IrdetoAppDepend> [ERROR] [Severity]Status-Source: [4]34-9
@@ -406,6 +443,8 @@ CA_DRV_Message()
 07-20 19:26:00.590 D/MMCP    ( 1643): [31m[1m<IrdetoAlarmMsg> [ERROR] [CA_FindBarkerMsgTextNum]<== *pTextNum = 148
 07-20 19:26:00.590 D/MMCP    ( 1643): [31m[1m<IrdetoAlarmMsg> [ERROR] [CA_NotifyCurrentErrInfo] :-wErrText 148 Geneal m_wStatus = 65535
 07-20 19:26:00.590 D/MMCP    ( 1643): [31m[1m<IrdetoAlarmMsg> [ERROR] [ CA_NotifyCurrentErrInfo] Post wErrText 148 to APP
+-->ParseServiceStatusMsg
+
 //Ca_irdto_tvos  //MsgDoneAlarm()
 07-20 19:26:00.590 D/MMCP    ( 1643): [31m[1m<IrdetoMsg> [ERROR] [MsgChangeToSeverity]:638
 //CaApp
