@@ -16,18 +16,46 @@ export SME_DEPS_BIN_PATH=$HOME/sme_tool/usr/bin
 export PERLLIB=~/sme_tool/usr/lib/perl/:$PERLLIB
 export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
 export PATH=$JAVA_HOME:$PATH
+3.0版本
+mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CSDTV/service/dtv/DataManager/ -B
+mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CSDTV/service/dtv/Source/ -B
+mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CSDTV/service/dtv/Section/ -B
+mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CA/ -B
+mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CSDTV/ -B
 
 ------------->TVOS_STA_3.1.00.1
+
+export PATH=$HOME/sme_tool/usr/bin:/usr/lib/jvm/java-7-openjdk-amd64/jre/bin:/usr/lib/jvm/java-7-openjdk-amd64/bin/:$PATH
+
+
+
+
+ok
+ANDROID_PRE_BUILD_PATHS=/usr/lib/jvm/java-7-openjdk-amd64/bin:
+ANDROID_JAVA_TOOLCHAIN=/usr/lib/jvm/java-7-openjdk-amd64/bin
+LD_LIBRARY_PATH=/sdb/chensheng/sme_tool/usr/lib:/sdb/chensheng/sme_tool/usr/lib:/sdb/chensheng/sme_tool/usr/lib:/sdb/chensheng/sme_tool/usr/lib:
+JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+
+pp
+export PATH=$HOME/sme_tool/usr/bin:/usr/lib/jvm/java-7-openjdk-amd64/jre/bin:/usr/lib/jvm/java-7-openjdk-amd64/bin/:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8/arm-linux-androideabi/bin:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/gcc/linux-x86:$PATH
+export ANDROID_PRE_BUILD_PATHS= /usr/lib/jvm/java-7-openjdk-amd64/bin/
+export ANDROID_JAVA_TOOLCHAIN=/usr/lib/jvm/java-7-openjdk-amd64/bin/
+export LD_LIBRARY_PATH= $HOME/sme_tool/usr/lib:$HOME/sme_tool/usr/lib:$HOME/sme_tool/usr/lib:$HOME/sme_tool/usr/lib:$LD_LIBRARY_PATH
+export  JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+
+
+export LD_LIBRARY_PATH=$HOME/sme_tool/usr/lib:$HOME/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/ndk/9/sources/cxx-stl/gnu-libstdc++/4.8/libs/x86_64:$LD_LIBRARY_PATH
+export SME_DEPS_BIN_PATH=$HOME/sme_tool/usr/bin
+export PERLLIB=~/sme_tool/usr/lib/perl/:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/ndk/9/sources/cxx-stl/gnu-libstdc++/4.8/libs/x86_64:$PERLLIB
+export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
+export PATH=$HOME/sme_tool/usr/bin:$JAVA_HOME:$PATH
+
 source platform/android/build/envsetup.sh
 lunch Hi3798MV200H-eng
-export PATH=$HOME/sme_tool/usr/bin:$PATH
-export LD_LIBRARY_PATH=$HOME/sme_tool/usr/lib:$LD_LIBRARY_PATH
-export SME_DEPS_BIN_PATH=$HOME/sme_tool/usr/bin
-export PERLLIB=~/sme_tool/usr/lib/perl/:$PERLLIB
-export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
-export PATH=$JAVA_HOME:$PATH
 
+备份文件编译
 mmm /sdb/wulijiao/tvosbak/COSHIP_TVOS/component/CA/ -B
+mmm /sdb/wulijiao/tvosbak/COSHIP_TVOS/component/CSDTV/ -B
 
 
 declare -x ANDROID_JAVA_TOOLCHAIN="/opt/java/jdk1.8.0_151/bin"
@@ -45,17 +73,8 @@ export BOOT_REG5_NAME :=
 
 
 
-备份：
-mmm /sdb/wulijiao/tvosbak/COSHIP_TVOS/component/CA/ -B
-mmm /sdb/wulijiao/tvosbak/COSHIP_TVOS/component/CSDTV/ -B
 
 
-
-mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CSDTV/service/dtv/DataManager/ -B
-mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CSDTV/service/dtv/Source/ -B
-mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CSDTV/service/dtv/Section/ -B
-mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CA/ -B
-mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CSDTV/ -B
 
 cp ./out/target/product/Hi3798MV200/system/bin/DTVServer /sdb/wulijiao/
 cp ./out/target/product/Hi3798MV200/system/lib/libirdto3.so /sdb/wulijiao/
@@ -80,6 +99,9 @@ CA数据流程：logcat -c;logcat -G 10M;logcat -v time |grep -E "dtv.search|dtv.si|d
 logcat -c;logcat -G 10M;logcat -v time | grep -E "IrdetoSmc|IrdetoDmx|IrdetoRsa|IrdetoUSPDependence|IrdetoVDDD|IrdetoProg|IrdetoOta"
 logcat -c;logcat -G 10M;logcat -v time | grep -E "IrdetoSmc|IrdetoDmx|IrdetoRsa|dtv.sicache|IrdetoUSPDependence|NGB_DB"
 logcat -c;logcat -G 10M;logcat -v time | grep -E "IrdetoRsa|cs_cssecure"
+
+
+
 乱码：
 java -encoding gdk /sdb/wulijiao/tvos/COSHIP_TVOS/framework/ngb-j/java/impl/ngb/ca/CAManagerImp.java
 解析动态库：
@@ -88,6 +110,14 @@ strings -f ./out/target/product/Hi3798MV200/system/lib/*.so |grep "pstMsg*******
  busybox free -m
  busybox sysctl -w vm.drop_caches=3
  rm data/
+
+清除缓存机顶盒数据缓存:
+rm /data/db/*.bin
+rm /data/db/config/PMT*
+rm /data/data/com.coship.providers.dvb/databases/*
+堆栈数据位置：
+/data/tomstonbes
+
 
 变动：
 改后的好处就是ca编译不再依赖dtv
@@ -100,7 +130,7 @@ arm-histbv310-linux-addr2line  -Ce out/target/product/Hi3798MV200/symbols/system
 
 跨越权限进行文件的拷贝：
 scp -r wulijiao@10.10.117.232:/sdb/wulijiao/libporting.so ./
-
+scp -r wulijiao@10.10.117.232:/sdb/wulijiao/libporting.so /sdb/chensheng/tvos/TVOS_STA_3.0.01.0/out/target/product/Hi3798MV200/symbols/system/lib/
 截获码流信息：
 echo help > demux_main 
 echo save dmxts stop > /proc/msp/demux_main
@@ -121,12 +151,7 @@ git push origin HAND:refs/for/master
 权限：
 chmod 777 ~/tvos/COSHIP_TVOS/framework/ngb-j/ -rf
 
-清除缓存机顶盒数据缓存:
-rm /data/db/*.bin
-rm /data/db/config/PMT*
-rm /data/data/com.coship.providers.dvb/databases/*
-堆栈数据位置：
-/data/tomstonbes
+
 
 属性设置：
 android 设置属性的C接口 property_set
@@ -344,3 +369,5 @@ DMUX_DRV_SetDescramblerEvenKey（dwDescrambleID, abOutKey, bTempLength, 1）；
 CS_CA_DSMSetEvenKeyValue（）；CSDSMDescrambleSetEvenKeyValue（设置解扰通道的偶Key值）；
 
 NGB_DB ：对表数据进行了缓存，便于其他模块的查询
+
+logcat > /data/logcat.txt

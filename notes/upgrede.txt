@@ -1,0 +1,130 @@
+1.下载jsion文件，升级标志比对，升级，升级成功，重启，再次下载Jsion, 升级版本比对，相同，删除本地下载的升级包；
+2. 本地下载升级软件的服务器地址更新，属性值的当时进行设置；
+3.文件、安装包的存放路径的确定；
+4.本地文件路径使用配置方式；
+
+启动应用：
+monkey -p com.coship.netupdate 1
+
+\\10.10.49.29\刘兵共享\Apache2.2.19
+
+属性设置：
+setprop http.upgrade.status 1
+setprop  persist.sys.update.url http://192.168.1.2/upgrade_release
+setprop persist.devices.soft.version 0103
+getprop persist.sys.update.url
+getprop persist.sys.upgrade.status
+busybox ifconfig eth0:1 192.168.1.3
+
+      property_get("persist.devices.soft.version", (char*)&acVersion, "");
+        property_get("ro.board.platform", (char*)&acPlatform, "");
+        property_get("sys.devices.sn", (char*)&acSn, "");
+        property_get("sys.devices.hw.version", (char*)&acHardware, "");
+
+
+抓取打印：
+logcat -c;logcat -v time | grep -E "NetUpgrade|upgrade"
+logcat |grep -E "NetUpgrade|upgrade"
+
+
+想system中放置应用：
+mount -o remount,rw /system
+cd system/bin
+chmod 777 test
+
+push指令：
+adb push Y:\gehua\Hi3798MV200\out\target\product\Hi3798MV200\system\bin\test /data/
+adb push Y:\gehua\Hi3798MV200\out\target\product\Hi3798MV200\system\lib\libupgrade\libupgrade.so /system/lib/
+
+
+am broadcast -a com.coship.netupdate --ei "DownloadProgress" 100
+
+检验：
+md5 update.zip
+
+http://192.168.1.2/upgrade_release
+
+cat /system/bin/adb.sh
+service list
+cat init.bigfish.rc
+
+netupgrade
+
+
+断点续传：
+wget -s http://httpd.apache.org/images/httpd_logo_wide_new.png 2>&1 | grep  'Accept-Ranges'
+ wget -s http://192.168.1.2/upgrade_release/MD5.txt  2>&1 | grep  'Accept-Ranges'          ---
+curl -range 0-98000 http://192.168.1.2/upgrade_release/MD5.txt
+
+curl -l http://119.23.79.221/upgrade.json
+
+curl -l http://192.168.1.2/upgrade.json
+
+L237:有分配未释放
+iGetArrayStr
+
+服务器：
+http://120.24.100.103:4000/
+
+
+
+vi ./plat/udi2_debug/cs_defaultPrint.c
+git  commit -m "<auther:wulijiao><Des:解决c层使用printf打印导致DTVServer挂掉>"
+Change-Id: If338af532c4bc926bb939238e58db4e0c669e945
+
+下载文件：
+busybox wget -S http://192.168.1.2/upgrade_release/index.html 2>&1 | grep 'Accept-Ranges'
+
+						fp_out = fopen(UPGRADE_CONFIG_PATH, "wb+");/*UPGRADE_CONFIG_PATH*/
+				        if(fp_out == NULL){
+				            nRet = 0;
+							ALOGE("open config file failed!!");
+				            return 0;    
+				        }
+
+				        pHnd = curl_easy_init();
+				        if(!pHnd) 
+						{
+				            nRet = 0;
+							ALOGE("curl_easy_init failed!!\n");
+				           // continue;
+				        }
+						curl_easy_setopt(pHnd, CURLOPT_BUFFERSIZE, 16*1024);
+				        curl_easy_setopt(pHnd, CURLOPT_WRITEFUNCTION, iWriteDataCallback);
+				        //curl_easy_setopt(pHnd, CURLOPT_WRITEDATA, fp_out);
+				        curl_easy_setopt(pHnd, CURLOPT_URL, pcUrl);
+				        curl_easy_setopt(pHnd, CURLOPT_HEADER, 0L); 
+				        curl_easy_setopt(pHnd, CURLOPT_NOBODY, 0L); 
+				        curl_easy_setopt(pHnd, CURLOPT_WRITEDATA, fp_out);
+				        curl_easy_setopt(pHnd, CURLOPT_TIMEOUT, 60);    
+				        curl_easy_setopt(pHnd, CURLOPT_CONNECTTIMEOUT, 10);        
+				        
+				        if (curl_easy_perform(pHnd) == CURLE_OK) 
+						{
+				            curl_easy_getinfo(pHnd, CURLINFO_CONTENT_LENGTH_DOWNLOAD, &dRemoteFileLenth);
+				            ALOGE("http_upgrade remoteFileLenth: %f\n", dRemoteFileLenth);							
+				        } 
+						else
+						{
+				            dRemoteFileLenth = -1;
+				            nRet = 0;							
+				        }
+						//fclose(fp_out);
+						if(pHnd != NULL) 
+						{
+							curl_easy_cleanup(pHnd);
+							pHnd = NULL;
+						}
+						continue;
+
+
+LOCAL_LDLIBS := -lm -llog  -lgnustl_shared -lc++ #编译可执行文件
+
+LOCAL_LDLIBS += $(LOCAL_PATH)/libupgrade.so #编译可执行文件
+
+LOCAL_MODULE :=UpGradeService
+记录：
+setprop [key] [value]
+
+-lgnustl_shared 
+-gnustl_shared 

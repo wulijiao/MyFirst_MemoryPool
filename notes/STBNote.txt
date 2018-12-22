@@ -70,6 +70,7 @@ make
 ls Makefile
 make mmcp_pack
 cd integration/product/topway_android_hisi3796m/
-. setupenv 
+. setupenv /. bin/setupenv --im/ .bin/setupenv --ia
+
 
 “甩信”是真正适合有线电视网、互联网和电信网三网融合的发展模式
