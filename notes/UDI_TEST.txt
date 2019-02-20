@@ -148,12 +148,6 @@ PS×¢Èë-´ò¿ª-´´½¨Ò»¸öinjectÊµÀý£¨»ñÈ¡injectÐÅÏ¢-²éÕÒ¿ÕÏÐinject¡¢´´½¨TS»º³åÇø¡¢°ó¶
 
 
 
-
-
-
-
-
-
 ÎÊÌâ£º
 
 1.µ±Ç°²¥·ÅÎ»ÖÃµÄ¾ø¶ÔÊ±³¤£¿
@@ -220,19 +214,6 @@ PS×¢Èë-´ò¿ª-´´½¨Ò»¸öinjectÊµÀý£¨»ñÈ¡injectÐÅÏ¢-²éÕÒ¿ÕÏÐinject¡¢´´½¨TS»º³åÇø¡¢°ó¶
 --ES×¢Èë²»ÐèÒªdemux¡¢audio£¬Ö»ÐèÒªvideo½âÂëÆ÷¡£
 29.ÔÚ½øÐÐÐÂÖ¡ÊÂ¼þµÄÊ±ºò£¬ÉêÇëÐÅºÅÁ¿µÄ×÷ÓÃÊÇÊ²Ã´£¿
 30.ÔÚ²âÊÔ¹ý³ÌÖÐ£¬ÈôÔÚÒ»¸ö²âÊÔ°¸ÀýÕýÔÚ½øÐÐµÄÊ±ºòÖÕÖ¹ÁË²âÊÔ£¬ÄÇÃ´ËûÖ®Ç°ÉêÇëµÄ¿Õ¼äÊÇÈçºÎÊÍ·ÅµÄ£¿£¿£¿£¿
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

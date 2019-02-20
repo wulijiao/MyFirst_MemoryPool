@@ -16,6 +16,11 @@ IPC 通信机制 -- binder机制：https://blog.csdn.net/luoshengyang/article/details/6
 基础了解 -- 设计与实现
 https://blog.csdn.net/luoshengyang/article/details/6618363
 https://blog.csdn.net/freshui/article/details/54926111
+卫星接收相关知识：
+https://wenku.baidu.com/view/65c3a65577232f60ddcca1ab.html
+
+CA授权信息
+https://wenku.baidu.com/view/10c13ac28bd63186bcebbc0e.html
 
 初解：
 程序的启动过程： main参数的传递 --》 init --- _start  --- http://www.bkjia.com/Androidjc/1031273.html

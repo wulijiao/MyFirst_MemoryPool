@@ -1,0 +1,118 @@
+--CA认证码流地址：
+\\10.10.49.161\silianka_sofull\ca_testStream
+--构建版本发布地址：
+\\10.10.117.242\output\HB_N9106H_B_sililanka
+用户名：share 密码：share
+
+按键调试：
+input keyevent 19
+
+春玲：
+\\C909826\20180926_irdeto
+杜磊：
+M:\A11\HB_N9106H_B\release2test\N9106H_B-eng】
+\\C909953\Users\909953\Desktop\SriLanka
+\\c909950\share2
+陈升：
+\\C905668\cca_file
+
+killall MMCPServer
+chipid打印关键字：
+dwChipID =C04D0594
+communiq
+
+主要测试项：
+Initialization
+911 Mode
+Basic CA
+Component Level
+IRD Text Message
+Targeted Messaging System ( TMS )
+Fingerprint
+Stress Test
+564Kb Stress Test
+
+烧录系统之后的相关操作：
+1.烧录系统
+2.安装应用
+adb install -r 
+3.删除一些应用
+--删除开机向导：
+rm -rf  system/priv-app/SetupWraith
+rm -rf HiAutoPair
+mount -o rw,remount /system;
+4.可解扰配置
+
+am start -n com.coship.providers.dvb-debug-v1.0-1.apk
+am start -n com.common.ottdvb/com.coship.ottdvb.gui.MainActivity
+
+excel
+MSR_TDES,MSR_TDES/MSR_AES,MSR_TDES/MSR_AES/IFCP_AES,MSR_AES,MSR_AES/IFCP_AES,MSR_AES+,IFCP_AES/MSR_AES,IFCP_AES,IFCP_AES+,
+
+斯里兰卡项目
+
+系统
+构建路径：  http://10.10.117.242:8080/hudson-2.2.0/job/HB_N9106H_B_sililanka/
+代码路径：  git  clone  ssh://wangyale@10.10.5.183:29418/hisi/HB_N9106H_B
+构建生成的文件夹目录：\\10.10.117.242\output\HB_N9106H_B_sililanka用户名：share  密码：share
+
+DTV  
+构建路径：  http://10.10.117.242:8080/hudson-2.2.0/job/DTVServer_sililanka/
+代码路径：  git  clone  ssh://wangyale@10.10.5.183:29418/hisi/DTVServer_sililanka
+取包路径：\\10.10.117.242\output\DTVServer_sililanka  
+
+MMCP  
+构建路径：  http://10.10.117.242:8080/hudson-2.2.0/job/MMCP_V6_sililanka/
+代码路径：git  clone  ssh://wangyale@10.10.5.183:29418/mmcp/MMCP_V6
+取包路径：\\10.10.117.242\output\MMCP_V6_sililanka
+
+
+抓打印：
+logcat -c;logcat -G 10M;logcat -v time | grep -E "csca_irdetoiuc_tvos|CSCACARDGetCaVersion|CAALCACARDGetCaVersion"
+porting  
+构建路径
+
+网络设置问题：
+平常设置IP：busybox ifconfig 192.168.1.128
+特殊设置：设置静态IP-设置网关-设置网络前缀长度-设置DNS1-设置DNS2
+设置网络前缀长度默认24，若不可以就网络搜索一下重新设置
+设置DNS1：192.168.0.1或者114.114.114.114
+设置DNS2：114.114.114.114或者8.8.8.8
+
+CA状态项无法查看问题
+进行cp /vendor/lib/libmmcp_custom_product.so  /system/lib/libmmcp_custom_product.so
+sync
+相关测试项：
+音视频正常,音频正常,视频正常,无反应,其他问题
+
+Flash.caAddr=0xC2300000
+Flash.caSize=0x100000
+Flash.irdetoIFCPDataAddr=0xC2600000
+Flash.irdetoIFCPDataSize=0x100000
+Flash.caMailAddr=0xC2800000 
+Flash.caMailSize=0xA00000 
+
+irdeto提问题echo系统信息：
+地址：https://apollo2.irdetoaccess.com/scripts/irdeto_cdo.cfg/php.exe/enduser/ask.php?p_sid=JzzPYU5o&p_accessibility=0
+
+帐户：coship2018_gn
+密码：Coship7000?
+
+运营方案：
+工作流程选择：
+IFCP混合部署测试：
+多重安全测试：
+SMP：直播与录制
+
+<Plugin> [../src/plugin/csplugin_register.c, 171] Register plugin [1(0:failure, 1:success)], pluginName: Ircode_Common
+<Plugin> [../src/plugin/csplugin_register.c, 171] Register plugin [1(0:failure, 1:success)], pluginName: Dm_Common
+<Plugin> [../src/plugin/csplugin_register.c, 171] Register plugin [1(0:failure, 1:success)], pluginName: Section_Common
+<Plugin> [../src/plugin/csplugin_register.c, 171] Register plugin [1(0:failure, 1:success)], pluginName: Search_H3796M_Tvos
+<Plugin> [../src/plugin/csplugin_register.c, 171] Register plugin [1(0:failure, 1:success)], pluginName: Epg_Tvos
+<Plugin> [../src/plugin/csplugin_register.c, 171] Register plugin [1(0:failure, 1:success)], pluginName: Subtitle_Common
+<Plugin> [../src/plugin/csplugin_register.c, 171] Register plugin [1(0:failure, 1:success)], pluginName: Ca_Irdetoiuc_tvos
+<Plugin> [../src/plugin/csplugin_register.c, 171] Register plugin [1(0:failure, 1:success)], pluginName: Private_Hotel_hi3796M
+<Plugin> [../src/plugin/csplugin_register.c, 171] Register plugin [1(0:failure, 1:success)], pluginName: Sn_OttDvb
+<Plugin> [../src/plugin/csplugin_register.c, 171] Register plugin [1(0:failure, 1:success)], pluginName: MPPlayerAdapter_UDI
+<Plugin> [../src/plugin/csplugin_register.c, 171] Register plugin [1(0:failure, 1:success)], pluginName: ChannelUpdate_Sililanka
+<Plugin> [../src/plugin/csplugin_register.c, 171] Register plugin [1(0:failure, 1:success)], pluginName: Copyright_TVOS

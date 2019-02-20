@@ -25,30 +25,31 @@ mmm /sdb/wulijiao/tvos/COSHIP_TVOS/component/CSDTV/ -B
 
 ------------->TVOS_STA_3.1.00.1
 
-export PATH=$HOME/sme_tool/usr/bin:/usr/lib/jvm/java-7-openjdk-amd64/jre/bin:/usr/lib/jvm/java-7-openjdk-amd64/bin/:$PATH
+export PATH=$HOME/sme_tool/usr/bin:/usr/lib/jvm/java-7-openjdk-amd64/jre/bin:/usr/lib/jvm/java-7-openjdk-amd64/bin:$PATH
 
 
 
 
 ok
 ANDROID_PRE_BUILD_PATHS=/usr/lib/jvm/java-7-openjdk-amd64/bin:
-ANDROID_JAVA_TOOLCHAIN=/usr/lib/jvm/java-7-openjdk-amd64/bin
+ANDROID_JAVA_TOOLCHAIN=/usr/lib/jvm/java-7-openjdk-amd64/bin：
 LD_LIBRARY_PATH=/sdb/chensheng/sme_tool/usr/lib:/sdb/chensheng/sme_tool/usr/lib:/sdb/chensheng/sme_tool/usr/lib:/sdb/chensheng/sme_tool/usr/lib:
-JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64：
 
 pp
 export PATH=$HOME/sme_tool/usr/bin:/usr/lib/jvm/java-7-openjdk-amd64/jre/bin:/usr/lib/jvm/java-7-openjdk-amd64/bin/:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8/arm-linux-androideabi/bin:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/gcc/linux-x86:$PATH
-export ANDROID_PRE_BUILD_PATHS= /usr/lib/jvm/java-7-openjdk-amd64/bin/
-export ANDROID_JAVA_TOOLCHAIN=/usr/lib/jvm/java-7-openjdk-amd64/bin/
+export ANDROID_PRE_BUILD_PATHS=" /usr/lib/jvm/java-7-openjdk-amd64/bin/"
+export ANDROID_JAVA_TOOLCHAIN="/usr/lib/jvm/java-7-openjdk-amd64/bin/"
 export LD_LIBRARY_PATH= $HOME/sme_tool/usr/lib:$HOME/sme_tool/usr/lib:$HOME/sme_tool/usr/lib:$HOME/sme_tool/usr/lib:$LD_LIBRARY_PATH
 export  JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export PATH=$JAVA_HOME:$PATH
 
 
 export LD_LIBRARY_PATH=$HOME/sme_tool/usr/lib:$HOME/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/ndk/9/sources/cxx-stl/gnu-libstdc++/4.8/libs/x86_64:$LD_LIBRARY_PATH
 export SME_DEPS_BIN_PATH=$HOME/sme_tool/usr/bin
 export PERLLIB=~/sme_tool/usr/lib/perl/:/sdb/wulijiao/tvos3.1.00.1/TVOS_STA_3.1.00.1/platform/android/prebuilts/ndk/9/sources/cxx-stl/gnu-libstdc++/4.8/libs/x86_64:$PERLLIB
 export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
-export PATH=$HOME/sme_tool/usr/bin:$JAVA_HOME:$PATH
+export PATH=$JAVA_HOME:$PATH
 
 source platform/android/build/envsetup.sh
 lunch Hi3798MV200H-eng
@@ -97,9 +98,12 @@ logcat -c;logcat -G 10M;logcat -v time | grep -E "CAManager_native|CAViewedIPP_n
 CA数据流程：logcat -c;logcat -G 10M;logcat -v time |grep -E "dtv.search|dtv.si|dtv.section|dtv.sicache|IrdetoSmc|IrdetoVDSC|IrdetoAppDepend|IrdetoCaCommand|IrdetoSmc|IrdetoVDDF|IrdetoDmx|IrdetoInterface|csca_irdto3_tvos|SoftDemux|IrdetoAlarmMsg|IrdetoOS|IrdetoUSPDependence|IrdetoBISS|IrdetoMsg|IrdetoNvm|IrdetoProg|IrdetoPvr|IrdetoSrvMgr|IrdetoSol|IrdetoUiReply|NGB_DB" > /data/CADTV.txt 
 
 logcat -c;logcat -G 10M;logcat -v time | grep -E "IrdetoSmc|IrdetoDmx|IrdetoRsa|IrdetoUSPDependence|IrdetoVDDD|IrdetoProg|IrdetoOta"
-logcat -c;logcat -G 10M;logcat -v time | grep -E "IrdetoSmc|IrdetoDmx|IrdetoRsa|dtv.sicache|IrdetoUSPDependence|NGB_DB"
-logcat -c;logcat -G 10M;logcat -v time | grep -E "IrdetoRsa|cs_cssecure"
-
+logcat -c;logcat -G 10M;logcat -v time | grep -E "IrdetoMsg"
+logcat -c;logcat -G 10M;logcat -v time | grep -E "iGetCaClientInfo"
+错误信息获取：
+logcat -s AndroidRuntime
+按键修改：
+android_ir_user -D
 
 
 乱码：
@@ -117,7 +121,6 @@ rm /data/db/config/PMT*
 rm /data/data/com.coship.providers.dvb/databases/*
 堆栈数据位置：
 /data/tomstonbes
-
 
 变动：
 改后的好处就是ca编译不再依赖dtv
@@ -146,6 +149,19 @@ git add
 git commit -m 
 git push origin HAND:refs/for/master
 注意钩子文件的下载，才可以留下记录
+
+版本信息查看;
+getprop | grep build
+海思调试方式：
+echo save es start > /proc/msp/demux_main  -- begin save es
+echo save es stop > /proc/msp/demux_main  -- stop save es
+echo save allts start x[portid] > /proc/msp/demux_main  -- begin save allts
+echo save allts stop > /proc/msp/demux_main  -- stop save allts
+echo save ipts start x[ram portid]> /proc/msp/demux_main  -- begin save ram port ts
+echo save ipts stop > /proc/msp/demux_main  -- stop save ram port ts
+echo save dmxts start x[dmxid] > /proc/msp/demux_main  -- begin save all channels ts
+echo save dmxts stop > /proc/msp/demux_main  -- stop save dmx ts
+echo help > /proc/msp/demux_main  -- show help info
 
 
 权限：
